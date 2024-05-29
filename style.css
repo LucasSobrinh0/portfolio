@@ -14,7 +14,7 @@ a{
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/background-image.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/programming.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
