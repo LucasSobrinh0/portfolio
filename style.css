@@ -271,3 +271,88 @@ header span{
     margin-bottom: 16px; /* Espaçamento entre parágrafos */
     font-size: 1.5rem;
 }
+
+.premiacoes {
+    background-color: #f0f8ff;
+    padding: 60px 20px;
+}
+
+.premiacoes h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    position: relative;
+}
+
+.premiacoes h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #6a11cb;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.premiacao-card {
+    background: linear-gradient(135deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.premiacao-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+.premiacao-card .card-header {
+    background-color: #6a11cb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.premiacao-card .card-header i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.premiacao-card .card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.premiacao-card .card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.premiacao-card .card-body p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.premiacao-card .card-body .data {
+    display: inline-block;
+    background-color: #6a11cb;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .premiacao-card {
+        margin-bottom: 30px;
+    }
+}
