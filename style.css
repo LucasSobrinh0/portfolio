@@ -1,217 +1,627 @@
-html {
-    height: 100%;  /* Essencial para cobrir toda a altura da janela do navegador */
+/* ------------------------------
+ Variaveis
+------------------------------ */
+:root {
+  --color-bg-gray: #333;
 }
 
-body{
+/* ------------------------------
+   1) RESET BÁSICO E FONTES
+------------------------------ */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-a{
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  a {
     text-decoration: none;
-}
-
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/programming.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    color: inherit;
+  }
+  
+  /* ------------------------------
+     2) HEADER (Hero Section)
+  ------------------------------ */
+  header {
+    background: white;
     width: 100%;
-    height: 85vh;
+    /* Remove o height fixo */
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+
+  .selfie_image_container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-}
+  }
 
-header h1 {
-    font-weight: bold;
-    color: white;
-    font-size: 3.5rem;
-}
-
-header p {
-    margin-top: 20px;
-    font-weight: bold;
-    color: white;
-    font-size: 1.5rem;
-}
-
-header div {
-    margin-top: 20px;
-}
-
-header a {
-    font-size: 1.5rem;
-    border: 2px solid white;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 20px;
-    display: inline-block; /* Allows transform to work properly */
-    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for transform and color */
-}
-
-header div a:hover {
-    color: #1E8AFF;
-    border-color: #1E8AFF;
-    transform: scale(1.1); /* Scales up the element on hover */
-}
-
-header span{
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.container-title{
+  
+  .selfie_image{
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+    background: url('img_logo/selfie_me.png') no-repeat center center;
+    background-size: cover;
+    width: 1400px;
+    height: 200px;
+  }
+  
+  header h1 {
+    font-weight: 700;
+    color: #000;
+    font-size: 1rem;
+  }
+  
+  header p {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #000;
+    font-size: 3.2rem;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  header span {
+    display: inline-block;
+    margin-top: 5px;
+    color: #000;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  .header-links {
+    margin-top: 30px;
+  }
+  
+  .header-links a {
+    font-size: 1.1rem;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .header-links a:hover {
+    color: #007BFF;
+    border-color: #007BFF;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsividade do header */
+  @media (max-width: 992px) {
+    header p{
+      width: 60%;
+    }
+  }
+  @media (max-width: 576px) {
+    header p{
+      width: 90%;
+    }
+  }
+  
+  /* ------------------------------
+     3) SEÇÃO DE SKILLS (Sistemas)
+  ------------------------------ */
+  .list_system {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    text-align: center;
+    background-color: #f1eeee;
+  }
+  
+  .container_system {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    
+  }
+  
+  .item_system {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1eeee;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    width: 250px; /* Tamanho fixo para todos os itens */
+    height: 150px; /* Altura fixa para limitar o espaço ocupado */
+    overflow: hidden; /* Impede que imagens maiores "saiam" da área */
+  }
+  
+  .item_system img {
+    max-width: 100%; /* Ajusta a largura para preencher o container */
+    max-height: 100%; /* Limita a altura para que não ultrapasse o container */
+    object-fit: contain; /* Garante que a imagem se encaixe sem distorção */
+  }
+  
+  .item_system:hover {
+    transform: scale(1.05);
+  }
 
-.container-title h2{
-    margin-top: 5vh;
-    font-size: 3rem;
-    font-weight: bold;
-}
+  @media (max-width: 1440px) {
+    .item_system{
+      width: 250px; /* Tamanho fixo para todos os itens */
+      height: 150px; /* Altura fixa para limitar o espaço ocupado */
+    }
+  }
 
-.cards {
+  @media (max-width: 992px) {
+    .item_system{
+      width: 120px; /* Tamanho fixo para todos os itens */
+      height: 100px; /* Altura fixa para limitar o espaço ocupado */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .item_system{
+      width: 100px; /* Tamanho fixo para todos os itens */
+      height: 100px; /* Altura fixa para limitar o espaço ocupado */
+    }
+  }
+  
+  /* ------------------------------
+     4) LINKS (Projetos / Premiações)
+  ------------------------------ */
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre botões */
+    margin: 30px 0;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff; /* Cor do texto padrão */
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradiente para fundo */
+    padding: 10px 20px;
+    border-radius: 8px; /* Arredondamento sutil */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    cursor: pointer;
+  }
+  
+  .nav-link i {
+    font-size: 1.3rem; /* Tamanho dos ícones */
+    
+  }
+  
+  .nav-link:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80); /* Alteração do gradiente */
+    transform: translateY(-3px); /* Elevação suave */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais evidente no hover */
+  }
+  
+  .nav-link.active {
+    background: #FFC107; /* Cor destacada para o botão ativo */
+    color: #333; /* Cor do texto no botão ativo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ativa */
+  }
+  
+  .nav-link.active:hover {
+    background: #e0a800; /* Alteração sutil no hover do ativo */
+  }
+  
+  
+  /* .hidden e .active para exibir/ocultar seções */
+  .hidden {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  
+  /* ------------------------------
+     5) CONTAINER GERAL DAS SEÇÕES
+  ------------------------------ */
+  .content {
+    padding: 20px;
+    background: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 auto 40px auto;
+    max-width: 1200px;
+  }
+  
+  /* ------------------------------
+     6) PREMIAÇÕES (awards-section)
+  ------------------------------ */
+  .premiacoes-titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .premiacoes-intro {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #444;
+  }
+  
+  /* Cards de premiações */
+  .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px;
-}
-
-.card {
-    background: white;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: 300px;
+  }
+  
+  .premiacao-card {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+  }
+  
+  .premiacao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  .card-header {
+    background: #000000;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .card-header i {
+    font-size: 1.5rem;
+    color: #007BFF;
+  }
+  
+  .card-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .card-body {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-body p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .btn-link {
+    display: flex;
+    margin-top: 5px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #007BFF;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: #007BFF;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-link:hover {
+    background: #FFC107;
+    color: #000;
+    border-color: #FFC107;
+  }
+  
+  .data {
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  /* Responsividade premiações */
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 calc(50% - 20px);
+    }
+  }
+  @media (max-width: 576px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+    }
+  }
+  
+  /* ------------------------------
+     7) PROJETOS (projects-section)
+  ------------------------------ */
+  .container-title {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container-title h2 {
+    margin-top: 5vh;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+  }
+  
+  .cards .card {
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: calc(33.333% - 40px); /* Subtracting the margin from the total width */
-    margin: 20px;
+    width: calc(33.333% - 20px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     text-align: center;
-}
-
-.card img {
-    
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  .cards .card img {
     width: 100%;
     height: auto;
-}
-
-.card-body {
+  }
+  
+  .cards .card-body {
     padding: 20px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-.card h3 {
+  }
+  
+  .cards .card-body h3 {
     margin-top: 0;
     color: #333;
-}
-
-.card p {
+    font-size: 1.1rem;
+  }
+  
+  .cards .card-body p {
     flex-grow: 1;
-}
-
-.btn {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
     background-color: #007BFF;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 10px;
     transition: background-color 0.3s;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     background-color: #0056b3;
-    color: white;
-}
-
-@media (max-width: 800px) {
-    .card {
-        width: 100%; /* Full width in smaller screens */
+    color: #fff;
+  }
+  
+  /* Responsividade projetos */
+  @media (max-width: 768px) {
+    .cards .card {
+      width: calc(50% - 20px);
     }
-}
-
-.experience {
-    background-color: #f8f8f8;
+  }
+  @media (max-width: 576px) {
+    .cards .card {
+      width: 100%;
+    }
+  }
+  
+  /* ------------------------------
+     8) EXPERIÊNCIA (timeline)
+  ------------------------------ */
+  .experience {
+    background-color: #fafafa;
     padding: 40px 20px;
     text-align: left;
-}
-
-.experience h2 {
+  }
+  
+  .experience h2 {
     text-align: center;
     color: #333;
     margin-bottom: 30px;
-}
-
-.timeline {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .timeline {
     position: relative;
-    margin: 20px 0;
-}
-
-.job {
-    border-left: 2px solid #6a11cb;
-    margin-left: 20px;
-    padding: 10px 0 10px 40px;
-    background: linear-gradient(to left, #f8f8f8 50%, #e9e9e9 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all 0.6s ease-out;
-    text-align: justify;
-}
-
-.job:hover {
-    background-position: left bottom;
-}
-
-.job h3 {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  /* Linha vertical no centro */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  }
+  
+  /* Cada job */
+  .job {
+    position: relative;
+    width: 45%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+  }
+  
+  /* Ímpares: esquerda */
+  .job:nth-child(odd) {
+    left: 0;
+  }
+  
+  /* Pares: direita */
+  .job:nth-child(even) {
+    left: 55%;
+  }
+  
+  /* Círculo conector */
+  .job::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: #6a11cb;
+    border-radius: 50%;
+    border: 3px solid #fafafa; 
+    z-index: 1;
+  }
+  
+  /* Ímpares: círculo na direita do job */
+  .job:nth-child(odd)::before {
+    right: -9px; 
+  }
+  
+  /* Pares: círculo na esquerda do job */
+  .job:nth-child(even)::before {
+    left: -9px; 
+  }
+  
+  .job:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .job h3 {
     color: #6a11cb;
     margin: 0 0 5px;
-}
-
-.job h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  .job h4 {
     color: #555;
     margin: 0 0 10px;
-}
-
-.job p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .job p {
     color: #666;
     margin: 0;
     line-height: 1.6;
-    font-size: 1.2rem;
-}
-
-.job:not(:last-child) {
-    padding-bottom: 20px;
-}
-
-.courses {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  
+  /* Responsividade da timeline */
+  @media (max-width: 768px) {
+    .timeline::before {
+      display: none;
+    }
+    .job {
+      width: 80%;
+      margin-bottom: 30px;
+    }
+    .job:nth-child(odd),
+    .job:nth-child(even) {
+      left: 10%;
+    }
+  }
+  @media (max-width: 576px) {
+    .job {
+      width: 100%;
+      left: 0 !important;
+      margin-bottom: 20px;
+    }
+    .job::before {
+      display: none;
+    }
+  }
+  
+  /* ------------------------------
+     9) CURSOS (courses)
+  ------------------------------ */
+  .courses {
     background-color: #fff;
     padding: 40px 20px;
     text-align: left;
     border-top: 5px solid #6a11cb;
-}
-
-.courses h2 {
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .courses h2 {
     text-align: center;
     color: #333;
     margin-bottom: 30px;
-}
-
-.course-list {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .course-list {
     position: relative;
     margin: 20px 0;
-}
-
-.course {
+  }
+  
+  .course {
     border-left: 2px solid #2575fc;
     margin-left: 20px;
     padding: 10px 0 10px 40px;
@@ -220,139 +630,70 @@ header span{
     background-position: right bottom;
     transition: all 0.6s ease-out;
     text-align: justify;
-}
-
-.course:hover {
+    border-radius: 5px; /* para ficar mais consistente */
+    margin-bottom: 20px; /* espaçamento entre "course" */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  }
+  
+  .course:hover {
     background-position: left bottom;
-}
-
-.course h3 {
+  }
+  
+  .course h3 {
     color: #2575fc;
     margin: 0 0 5px;
-}
-
-.course h4 {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .course h4 {
     color: #555;
     margin: 0 0 10px;
-}
-
-.course p {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .course p {
     color: #666;
     margin: 0;
     line-height: 1.6;
-}
-
-.course:not(:last-child) {
-    padding-bottom: 20px;
-}
-
-.about-me {
+    font-size: 1rem;
+  }
+  
+  /* ------------------------------
+     10) SOBRE MIM (about-me)
+  ------------------------------ */
+  .about-me {
     background-color: #fff;
     padding: 40px 20px;
-    text-align: left; /* Alinha o texto à esquerda para uma leitura mais natural e formal */
     max-width: 1200px;
-    margin: 40px auto; /* Centraliza a seção na página e adiciona espaçamento vertical */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona sombra sutil para um efeito elevado */
-    border-radius: 10px; /* Bordas arredondadas para um look moderno */
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
     text-align: center;
-}
-
-.about-me h2 {
-    color: #6a11cb; /* Cor vibrante para o título para destacar */
-    margin-bottom: 24px; /* Espaçamento abaixo do título */
-    text-align: center; /* Centraliza o título */
-    font-size: 2rem; /* Tamanho maior para o título */
-}
-
-.about-me p {
-    font-size: 16px; /* Tamanho adequado para leitura confortável */
-    color: #333; /* Cor escura para contraste claro com o fundo */
-    line-height: 1.8; /* Espaçamento de linha para melhorar a legibilidade */
-    margin-bottom: 16px; /* Espaçamento entre parágrafos */
-    font-size: 1.5rem;
-}
-
-.premiacoes {
-    background-color: #f0f8ff;
-    padding: 60px 20px;
-}
-
-.premiacoes h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 40px;
-    font-size: 3rem;
-    position: relative;
-}
-
-.premiacoes h2::after {
-    content: '';
-    width: 100px;
-    height: 4px;
-    background-color: #6a11cb;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-.premiacao-card {
-    background: linear-gradient(135deg, #ffffff, #e6e6e6);
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.premiacao-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-}
-
-.premiacao-card .card-header {
-    background-color: #6a11cb;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.premiacao-card .card-header i {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #ffcc00;
-}
-
-.premiacao-card .card-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.premiacao-card .card-body {
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.premiacao-card .card-body p {
-    color: #555;
+  }
+  
+  .about-me h2 {
+    color: #000000;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .about-me p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.premiacao-card .card-body .data {
-    display: inline-block;
-    background-color: #6a11cb;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    .premiacao-card {
-        margin-bottom: 30px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    text-align: justify; /* se preferir justificado, senão deixe center */
+    /* Para centralizar o texto, troque para text-align: center; */
+  }
+  
+  /* Responsividade extra */
+  @media (max-width: 768px) {
+    .courses, .about-me {
+      margin: 20px auto;
+      padding: 20px;
     }
-}
+  }
+  

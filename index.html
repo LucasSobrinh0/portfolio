@@ -2,237 +2,324 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Lucas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZYjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts: Poppins (exemplo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Portfolio Lucas</title>
 </head>
 
 <body>
-    <header>
-        <h1>Olá, eu sou o Lucas</h1>
-        <p>Desenvolvedor Python Django | Suporte de TI | Suporte Linux</p>
-        <span>lucas.sobrinho.crn@gmail.com</span>
-        <div>
-            <a href="https://br.linkedin.com/in/lucas-sobrinho-c-b9b6661b9/en"><i class="bi bi-linkedin"></i>
-                Linkedin</a>
-            <a href="https://github.com/LucasSobrinh0"><i class="bi bi-github"></i> GitHub</a>
-        </div>
-    </header>
-    <section class="premiacoes">
-        <div class="container">
-            <h2>Premiações</h2>
-            <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="premiacao-card">
-                        <div class="card-header">
-                            <i class="bi bi-trophy-fill"></i>
-                            <h3>Top 1 - Tech Experience</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Liderei e desenvolvi tanto o backend (Python, Flask) quanto o frontend (Javascript,
-                                Bulma) de um projeto inovador em uma
-                                competição entre 12 equipes na faculdade Invest, destacando-me pela excelência técnica e
-                                capacidade de
-                                liderança.</p>
-                            <a href="https://github.com/CarolScript/MG">Repositório do Projeto</a>
-                            <br>
-                            <span class="data">Novembro 2024</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="premiacao-card">
-                        <div class="card-header">
-                            <i class="bi bi-emoji-smile-fill"></i>
-                            <h3>Top 2 - Tech Experience</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Fui premiado com o 2º lugar em um Workshop feito pela faculdade Invest, onde
-                                destaquei-me na resolução de problemas complexos de backend (Node.js e Prisma).
-                                Contribuí com soluções inovadoras e eficazes, aplicando lógica e agilidade dentro da
-                                metodologia Scrum.</p>
-                            <br>
-                            <span class="data">Outubro 2023</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="premiacao-card">
-                        <div class="card-header">
-                            <i class="bi bi-people-fill"></i>
-                            <h3>Destaque - Projeto Integrador</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Fui reconhecido pelo projeto "Letras Vivas", onde liderei a criação de uma solução que
-                                reduziu a fadiga de leitura, fragmentando conteúdos e utilizando técnicas de engajamento
-                                inspiradas no TikTok e Instagram.</p>
-                                <br>
-                            <a href="https://lucassobrinh0.github.io/letrasvivas/">LetrasVivas</a>
-                            <br>
-                            <span class="data">Dezembro 2024</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Adicione mais cards conforme necessário -->
-            </div>
-        </div>
-    </section>
+  <!-- =========================
+       HEADER (Hero Section)
+  ========================== -->
+  <header>
+    <div class="selfie_image_container">
+      <div class="selfie_image"></div>
+    </div>
+    <h1>Olá, eu sou o Lucas</h1>
+    <p>Sênior em Tecnologia da Informação</p>
+    <span>lucas.sobrinho.crn@gmail.com</span>
 
+    <div class="header-links">
+      <a href="https://br.linkedin.com/in/lucas-sobrinho-c-b9b6661b9/en" target="_blank">
+        <i class="bi bi-linkedin"></i> Linkedin
+      </a>
+      <a href="https://github.com/LucasSobrinh0" target="_blank">
+        <i class="bi bi-github"></i> GitHub
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================
+       SISTEMAS / SKILLS
+  ========================== -->
+  <section class="list_system">
+    <div class="container_system">
+      <div class="item_system"><img src="img_logo/python.png" alt="Python"></div>
+      <div class="item_system"><img src="img_logo/linux.png" alt="Linux"></div>
+      <div class="item_system"><img src="img_logo/webflow.png" alt="Webflow"></div>
+      <div class="item_system"><img src="img_logo/windows.png" alt="Windows"></div>
+    </div>
+  </section>
+
+  <!-- =========================
+       LINKS DE NAVEGAÇÃO
+  ========================== -->
+  <div class="links">
+    <a id="btn-projects" class="nav-link active">
+      <i class="bi bi-folder"></i> Projetos
+    </a>
+    <a id="btn-pages" class="nav-link">
+      <i class="bi bi-layout-text-sidebar-reverse"></i> Sites
+    </a>
+    <a id="btn-awards" class="nav-link">
+      <i class="bi bi-trophy"></i> Premiações
+    </a>
+  </div>
+  
+
+  <!-- =========================
+       SEÇÃO DE PREMIAÇÕES
+  ========================== -->
+  <div id="awards-section" class="content hidden">
+    <div class="container">
+      <h2 class="premiacoes-titulo">Minhas Premiações</h2>
+      <p class="premiacoes-intro">Aqui estão as premiações que já conquistei...</p>
+
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="premiacao-card">
+            <div class="card-header">
+              <i class="bi bi-trophy-fill icon-1x"></i>
+              <h3>Top 1 - Tech Experience</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Liderei e desenvolvi tanto o backend (Python, Flask) quanto o frontend (Javascript,
+                Bulma) de um projeto inovador em uma competição entre 12 equipes na faculdade Invest,
+                destacando-me pela excelência técnica e capacidade de liderança.
+              </p>
+              <a href="https://github.com/CarolScript/MG" target="_blank" class="btn-link">
+                Repositório do Projeto
+              </a>
+              <br>
+              <span class="data">Novembro 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="premiacao-card">
+            <div class="card-header">
+              <i class="bi bi-emoji-smile-fill icon-1x"></i>
+              <h3>Top 2 - Tech Experience</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Fui premiado com o 2º lugar em um Workshop feito pela faculdade Invest, onde destaquei-me
+                na resolução de problemas complexos de backend (Node.js e Prisma). Contribuí com soluções
+                inovadoras e eficazes, aplicando lógica e agilidade dentro da metodologia Scrum.
+              </p>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7124401110185828352/" target="_blank" class="btn-link">
+                Postagem no Linkedin
+              </a>
+              <br>
+              <span class="data">Outubro 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="premiacao-card">
+            <div class="card-header">
+              <i class="bi bi-people-fill icon-1x"></i>
+              <h3>Destaque - Projeto Integrador</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Fui reconhecido pelo projeto "Letras Vivas", onde liderei a criação de uma solução
+                que reduziu a fadiga de leitura, fragmentando conteúdos e utilizando técnicas de
+                engajamento inspiradas no TikTok e Instagram.
+              </p>
+              <br>
+              <a href="https://lucassobrinh0.github.io/letrasvivas/" target="_blank" class="btn-link">
+                LetrasVivas
+              </a>
+              <br>
+              <span class="data">Dezembro 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adicione mais cards conforme necessário -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================
+       SEÇÃO DE PROJETOS
+  ========================== -->
+  <div id="projects-section" class="content hidden">
     <div class="container-title">
-        <h2>Projetos</h2>
+      <h2>Projetos</h2>
     </div>
     <div class="cards">
-        <div class="card">
-            <img src="img/controle_de_estoque.gif" alt="Projeto 1">
-            <div class="card-body">
-                <h3>Sistema de controle de estoque - Full Stack - Python e JavaScript</h3>
-                <p>Um projeto de controle de estoque full stack utilizando Django Rest Framework, sistemas de token com
-                    JWT e Javascript.</p>
-                <a href="https://github.com/LucasSobrinh0/controle-de-estoque-rest-api" class="btn">Acessar GitHub</a>
-            </div>
+      <div class="card">
+        <img src="img/controle_de_estoque.gif" alt="Projeto 1">
+        <div class="card-body">
+          <h3>Sistema de controle de estoque - Full Stack - Python e JavaScript</h3>
+          <p>
+            Um projeto de controle de estoque full stack utilizando Django Rest Framework, sistemas
+            de token com JWT e Javascript.
+          </p>
+          <a href="https://github.com/LucasSobrinh0/controle-de-estoque-rest-api" class="btn" target="_blank">
+            Acessar GitHub
+          </a>
         </div>
-        <div class="card">
-            <img src="img/agendamento.gif" alt="Projeto 2">
-            <div class="card-body">
-                <h3>Sistema de agendamento de consultas médicas - Full Stack - Python e Javascript</h3>
-                <p>Esse sistema foi um projeto da faculdade onde apresentamos uma plataforma de agendamento médico.
-                    Utilizamos inputmask para formatação de dados como cpf e telefone, Javascript, python, JWT e
-                    bootstrap.</p>
-                <a href="https://github.com/LucasSobrinh0/projeto_agendamento" class="btn">Acessar GitHub</a>
-            </div>
+      </div>
+      <div class="card">
+        <img src="img/agendamento.gif" alt="Projeto 2">
+        <div class="card-body">
+          <h3>Sistema de agendamento de consultas médicas - Full Stack - Python e Javascript</h3>
+          <p>
+            Esse sistema foi um projeto da faculdade onde apresentamos uma plataforma de agendamento médico.
+            Utilizamos inputmask para formatação de dados como CPF e telefone, JavaScript, Python, JWT e Bootstrap.
+          </p>
+          <a href="https://github.com/LucasSobrinh0/projeto_agendamento" class="btn" target="_blank">
+            Acessar GitHub
+          </a>
         </div>
-        <div class="card">
-            <img src="img/cadastro_de_paciente.gif" alt="Projeto 3">
-            <div class="card-body">
-                <h3>Cadastro de pacientes - Full Stack - Python e JavaScript</h3>
-                <p>Um projeto simples de cadastro de pacientes apenas para aprendizado de como tratar dados com API
-                    rest.</p>
-                <a href="https://github.com/LucasSobrinh0/cadastro_de_paciente" class="btn">Acessar GitHub</a>
-            </div>
+      </div>
+      <div class="card">
+        <img src="img/cadastro_de_paciente.gif" alt="Projeto 3">
+        <div class="card-body">
+          <h3>Cadastro de pacientes - Full Stack - Python e JavaScript</h3>
+          <p>
+            Um projeto simples de cadastro de pacientes apenas para aprendizado de como tratar dados com API REST.
+          </p>
+          <a href="https://github.com/LucasSobrinh0/cadastro_de_paciente" class="btn" target="_blank">
+            Acessar GitHub
+          </a>
         </div>
+      </div>
     </div>
-    <section class="premiacoes">
-    </section>
+  </div>
+
+  <!-- =========================
+       SEÇÃO DE Sites
+  ========================== -->
+
+  <div id="pages-section" class="content hidden">
+    <div class="container-title">
+      <h2>Sites feitos por mim</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="img/VILAROUCA_PREVIDENCIARIO.gif" alt="VILAROUCA_PREVIDENCIARIO">
+        <div class="card-body">
+          <h3>Vilarouca Advocacia | Previdenciário</h3>
+          <p>
+            Uma das minhas landing pages feitas junto com o grupo de marketing para trafego pago, focado no público mais
+            velho.
+          </p>
+          <a href="https://www.vilarouca.com/previdenciario" class="btn" target="_blank">
+            Acessar Site
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <section class="experience">
-        <h2>Experiência Profissional</h2>
-        <div class="timeline">
-            <div class="job">
-                <h3>Auxiliar T.I</h3>
-                <h4>Vilarouca - Julho 2024 - Atualmente</h4>
-                <p>Implantei sistemas de chatbot inovadores, resultando em um aumento de 600% na eficiência do
-                    atendimento aos funcionários. Antes, nossa capacidade era limitada a 50 atendimentos diários, mas
-                    com a solução implementada, conseguimos expandir para 300 atendimentos por dia, melhorando
-                    drasticamente a produtividade e satisfação.
-                    <br><br>
-                    Além disso, desenvolvi automações avançadas que ampliaram nossa capacidade de contato com clientes,
-                    incluindo um sistema de disparo de mensagens via WhatsApp que evita o bloqueio da conta, disponível
-                    no GitHub: <a href="https://github.com/LucasSobrinh0/Whatsapp-Sender">Whatsapp-Sender</a>
-                    <br><br>
-                    Outra iniciativa significativa foi a criação de automações para o preenchimento rápido de planilhas
-                    extensas, utilizando Python, Pandas e Selenium, o que reduziu consideravelmente o tempo de execução
-                    de tarefas antes demoradas, otimizando o processo de gestão de dados.
-                    <br><br>
-                    Além dessas realizações técnicas, também aprimorei minhas habilidades em design ao criar landing
-                    pages funcionais e esteticamente atraentes, utilizando ferramentas no-code como o WebFlow,
-                    combinando design e experiência do usuário de forma eficaz.
+      <h2>Experiência Profissional</h2>
+      <div class="timeline">
 
-
-                <p>
-            </div>
-            <div class="job">
-                <h3>Auxiliar Informática</h3>
-                <h4>Atacadão S.A - Junho 2023 - Março 2024</h4>
-                <p>Gerenciei a infraestrutura de servidores corporativos, assegurando sua operacionalidade contínua e a
-                    máxima segurança das informações. Especializei-me na resolução ágil e eficaz de incidentes e na
-                    oferta de suporte técnico de alta qualidade, garantindo a continuidade das operações sem
-                    interrupções. Aperfeiçoei minhas habilidades em administração de sistemas Linux, desenvolvendo
-                    scripts em shell para automação de processos e otimização de recursos. Além disso, adquiri expertise
-                    na resolução de problemas relacionados a notas fiscais e desempenhei um papel crucial na
-                    implementação de novos sistemas, bem como no treinamento e capacitação de colaboradores, promovendo
-                    a evolução tecnológica da empresa.
-                <p>
-            </div>
-            <div class="job">
-                <h3>Aprendiz</h3>
-                <h4>Atacadão S.A - Março 2022 - Março 2023</h4>
-                <p>Como aprendiz administrativo, coordenei as rotinas de RH, Almoxarifado, Cobrança e Gerência,
-                    otimizando processos e elevando a eficiência operacional. Meu envolvimento contribuiu para a
-                    melhoria das práticas administrativas e fortalecimento das habilidades de comunicação e gestão.</p>
-            </div>
-            <div class="job">
-                <h3>Experiência em projetos pessoais</h3>
-                <h4>Desenvolvimento</h4>
-                <p>Aprimorei minhas habilidades em desenvolvimento web através de projetos pessoais hospedados no GitHub
-                    e trabalhos acadêmicos, incluindo o projeto integrador "Me Encontrando". Este projeto visa facilitar
-                    o acesso a recursos psicológicos, destacando minha capacidade de implementar soluções práticas e
-                    relevantes socialmente.</p>
-            </div>
+        <div class="job">
+          <h3>Auxiliar T.I</h3>
+          <h4>Vilarouca - Julho 2024 - Atualmente</h4>
+          <p>Implantei sistemas de chatbot inovadores, resultando em um aumento de 600% na eficiência do
+            atendimento aos funcionários...
+          </p>
         </div>
+
+        <div class="job">
+          <h3>Auxiliar Informática</h3>
+          <h4>Atacadão S.A - Junho 2023 - Março 2024</h4>
+          <p>Gerenciei a infraestrutura de servidores corporativos, assegurando sua operacionalidade contínua...
+          </p>
+        </div>
+
+        <div class="job">
+          <h3>Aprendiz</h3>
+          <h4>Atacadão S.A - Março 2022 - Março 2023</h4>
+          <p>Como aprendiz administrativo, coordenei as rotinas de RH, Almoxarifado, Cobrança e Gerência...
+          </p>
+        </div>
+
+        <div class="job">
+          <h3>Experiência em projetos pessoais</h3>
+          <h4>Desenvolvimento</h4>
+          <p>Aprimorei minhas habilidades em desenvolvimento web através de projetos pessoais hospedados no GitHub...
+          </p>
+        </div>
+
+      </div>
     </section>
+
     <section class="courses">
-        <h2>Educação</h2>
-        <div class="course-list">
-            <div class="course">
-                <h3>Analise e Desenvolvimento de Sistemas</h3>
-                <h4>Invest - Fevereiro de 2023 - Cursando</h4>
-                <p>Atualmente estou no terceiro semestre. Fui capaz de desenvolver habilidades em programação web usando
-                    HTML, CSS, JavaScript e Python. Também aprendi SCRUM para melhorar a gestão de projetos e aprimorei
-                    meu conhecimento em segurança da informação para proteger dados. Estas experiências estão
-                    aprimorando minhas capacidades técnicas e de comunicação.</p>
-            </div>
-            <div class="course">
-                <h3>Programação em Python do básico ao avançado</h3>
-                <h4>Udemy - Concluído em Abril 2024</h4>
-                <p>Adquiri conhecimento
-                    profundo em Python sem o uso de frameworks. Este curso me proporcionou uma base sólida na linguagem,
-                    preparando-me para aplicar este conhecimento em diversos contextos de programação.</p>
-            </div>
-            <div class="course">
-                <h3>Programação Shell Script - Automatizando Rotinas no Linux</h3>
-                <h4>Udemy - Concluído em Setembro 2023</h4>
-                <p>Este curso foi capaz de me ajudar a automatizar rotinas e aprofundar minha compreensão da lógica de
-                    programação. Este domínio me
-                    possibilitou otimizar processos e aumentar a eficiência operacional de maneira significativa.</p>
-            </div>
-            <div class="course">
-                <h3>Aprendizagem Profissional de Qualificação em Serviços de Supermercado</h3>
-                <h4>SENAC - Concluído em Março de 2023</h4>
-                <p>Completei um curso de Aprendizagem Profissional em Serviços de Supermercado, onde desenvolvi
-                    habilidades práticas em atendimento ao cliente, gestão de estoques e operações de caixa. Este curso
-                    ampliou minha capacidade de trabalhar em equipe e minha proatividade, preparando-me para desafios em
-                    ambientes de varejo dinâmicos.</p>
-            </div>
-            <div class="course">
-                <h3>Assistente Administrativo com informática</h3>
-                <h4>SENAI - Concluído em Novembro de 2020</h4>
-                <p>Aprimorei minhas habilidades com o Pacote Office e em rotinas administrativas, melhorando
-                    significativamente minha organização e eficiência. Também desenvolvi minhas competências
-                    comunicativas e proatividade, essenciais para um desempenho eficaz e colaborativo.</p>
-            </div>
+      <h2>Educação</h2>
+      <div class="course-list">
+        <div class="course">
+          <h3>Analise e Desenvolvimento de Sistemas</h3>
+          <h4>Invest - Fevereiro de 2023 - Cursando</h4>
+          <p>Atualmente estou no terceiro semestre. Fui capaz de desenvolver habilidades em programação web usando
+            HTML, CSS, JavaScript e Python. Também aprendi SCRUM para melhorar a gestão de projetos e aprimorei
+            meu conhecimento em segurança da informação para proteger dados. Estas experiências estão
+            aprimorando minhas capacidades técnicas e de comunicação.</p>
         </div>
+        <div class="course">
+          <h3>Programação em Python do básico ao avançado</h3>
+          <h4>Udemy - Concluído em Abril 2024</h4>
+          <p>Adquiri conhecimento
+            profundo em Python sem o uso de frameworks. Este curso me proporcionou uma base sólida na linguagem,
+            preparando-me para aplicar este conhecimento em diversos contextos de programação.</p>
+        </div>
+        <div class="course">
+          <h3>Programação Shell Script - Automatizando Rotinas no Linux</h3>
+          <h4>Udemy - Concluído em Setembro 2023</h4>
+          <p>Este curso foi capaz de me ajudar a automatizar rotinas e aprofundar minha compreensão da lógica de
+            programação. Este domínio me
+            possibilitou otimizar processos e aumentar a eficiência operacional de maneira significativa.</p>
+        </div>
+        <div class="course">
+          <h3>Aprendizagem Profissional de Qualificação em Serviços de Supermercado</h3>
+          <h4>SENAC - Concluído em Março de 2023</h4>
+          <p>Completei um curso de Aprendizagem Profissional em Serviços de Supermercado, onde desenvolvi
+            habilidades práticas em atendimento ao cliente, gestão de estoques e operações de caixa. Este curso
+            ampliou minha capacidade de trabalhar em equipe e minha proatividade, preparando-me para desafios em
+            ambientes de varejo dinâmicos.</p>
+        </div>
+        <div class="course">
+          <h3>Assistente Administrativo com informática</h3>
+          <h4>SENAI - Concluído em Novembro de 2020</h4>
+          <p>Aprimorei minhas habilidades com o Pacote Office e em rotinas administrativas, melhorando
+            significativamente minha organização e eficiência. Também desenvolvi minhas competências
+            comunicativas e proatividade, essenciais para um desempenho eficaz e colaborativo.</p>
+        </div>
+      </div>
     </section>
     <section class="about-me">
-        <h2>Sobre Mim</h2>
-        <p>Meu nome é Lucas e tenho 20 anos. Desde os 6 anos de idade, sou fascinado por computadores, sempre buscando
-            entender e
-            resolver problemas de sistema. Meu interesse por programação começou aos 15 anos, em 2021, quando comecei a
-            aprender Python. Atualmente, dedico parte do meu tempo à estudar mais sobre o mundo da programação/Cyber
-            Security e à
-            leitura de livros sobre lógica, educação financeira e
-            psicologia, buscando aprimorar não apenas minhas habilidades técnicas, mas também minhas competências
-            interpessoais. Além disso, gosto de desenvolver projetos pessoais que me permitem melhorar continuamente
-            minhas habilidades em desenvolvimento web, como o projeto integrador da faculdade 'Me Encontrando', que visa
-            facilitar o acesso a
-            recursos psicológicos por meio da tecnologia.</p>
+      <h2>Sobre Mim</h2>
+      <p>Meu nome é Lucas e tenho 20 anos. Desde os 6 anos de idade, sou fascinado por computadores, sempre buscando
+        entender e
+        resolver problemas de sistema. Meu interesse por programação começou aos 15 anos, em 2021, quando comecei a
+        aprender Python. Atualmente, dedico parte do meu tempo à estudar mais sobre o mundo da programação/Cyber
+        Security e à
+        leitura de livros sobre lógica, educação financeira e
+        psicologia, buscando aprimorar não apenas minhas habilidades técnicas, mas também minhas competências
+        interpessoais. Além disso, gosto de desenvolver projetos pessoais que me permitem melhorar continuamente
+        minhas habilidades em desenvolvimento web, como o projeto integrador da faculdade 'Me Encontrando', que visa
+        facilitar o acesso a
+        recursos psicológicos por meio da tecnologia.</p>
     </section>
-
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WsPTn3ZBj0ZgjMwuKfSfnuhFQKqZZP28LcHGp5ZVi6qfXki2v44qBtENYzA/S+fZ"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
