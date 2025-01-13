@@ -220,6 +220,7 @@ header span {
   gap: 20px;
   padding: 30px 0;
   background-color: var(--color-bg-gray);
+  margin-top: 50px;
 }
 
 .nav-link {
@@ -293,6 +294,7 @@ header span {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 /* As seções usam o background do container para não ter buracos brancos */
