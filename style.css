@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Corpo da página */
@@ -191,6 +192,9 @@ header span {
     width: 100px;
     height: 100px;
   }
+  .container_system{
+    gap: -0px;
+  }
 }
 
 /* ------------------------------
@@ -236,6 +240,21 @@ header span {
 }
 .active {
   display: block;
+}
+
+@media (max-width: 520px) {
+  .links{
+    gap: 5px;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    gap: 8px;
+  }
+  
+  .nav-link i {
+    font-size: 1rem;
+  }
 }
 
 /* ------------------------------
@@ -640,7 +659,7 @@ header span {
 .course {
   border-left: 2px solid #2575fc;
   margin-left: 20px;
-  padding: 10px 0 10px 40px;
+  padding: 10px 40px 10px 40px;
   background: linear-gradient(to left, #444 50%, #555 50%);
   background-size: 200% 100%;
   background-position: right bottom;
