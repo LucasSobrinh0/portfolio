@@ -6,6 +6,7 @@
   --color-gray: #c2c2c2;         /* Texto padrão em cinza claro */
   --color-bg-gray-secondary: #181818; /* Fundo de cards / seções */
   --card-bg-gray: #333333;       /* Fundo mais escuro para alguns elementos */
+  --size-font-primary:3rem ;
 }
 
 /* Reset básico */
@@ -69,16 +70,18 @@ header h1 {
 }
 
 /* Texto principal em gradiente */
-header p {
+.size_font_primary {
   font-weight: bold;
-  font-size: 3rem;
-  width: 40%;
+  font-size: var(--size-font-primary);
+  max-width: 1200px;
   text-align: center;
   line-height: 3.5rem;
   margin-top: 2vh;
   background: linear-gradient(90deg, #ffffff 0%, #757575 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  justify-content: center;
+  align-items: center;
 }
 
 /* E-mail ou subtítulo */
@@ -114,17 +117,17 @@ header span {
 
 /* Responsividade do Header */
 @media (max-width: 992px) {
-  header p {
-    width: 60%;
+  .size_font_primary  {
+    width:90%;
     font-size: 2.4rem;
     line-height: 3rem;
   }
 }
 
 @media (max-width: 576px) {
-  header p {
-    width: 90%;
-    font-size: 2rem;
+  .size_font_primary  {
+    width: 95%;
+    font-size: 1.8rem;
     line-height: 2.5rem;
   }
 
@@ -248,9 +251,18 @@ header span {
 /* .hidden e .active para exibir/ocultar seções de navegação */
 .hidden {
   display: none;
+  
 }
 .active {
   display: block;
+}
+
+.nav-link.active {
+  color: yellow;
+  background-color: #333;
+  border-color: yellow;
+  box-shadow: 0 0 10px yellow;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 520px) {
@@ -295,7 +307,13 @@ header span {
 /* ------------------------------
    PREMIAÇÕES (awards-section)
 ------------------------------ */
-.premiacoes-titulo {
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* .premiacoes-titulo {
   font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 10px;
@@ -303,9 +321,9 @@ header span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-}
+} */
 
-.premiacoes-intro {
+.intro_text {
   text-align: center;
   font-size: 1rem;
   margin-bottom: 40px;
@@ -332,7 +350,8 @@ header span {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  min-height: 280px;
+  justify-content: center;
+  align-items: center;
 }
 
 .premiacao-card:hover {
@@ -363,7 +382,7 @@ header span {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 .card-body p {
@@ -424,14 +443,14 @@ header span {
   margin-bottom: 30px;
 }
 
-.container-title h2 {
+/* .container-title h2 {
   font-size: 2rem;
   font-weight: bold;
   background: linear-gradient(90deg, #ffffff 0%, #757575 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
-}
+} */
 
 .cards {
   display: flex;
@@ -519,10 +538,14 @@ header span {
 .experience {
   background-color: var(--color-bg-gray-secondary);
   padding: 40px 20px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.experience h2 {
+/* .experience h2 {
   text-align: center;
   color: var(--color-gray);
   margin-bottom: 30px;
@@ -531,13 +554,14 @@ header span {
   background: linear-gradient(90deg, #ffffff 0%, #757575 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
+  margin-top: 40px;
 }
 
 .timeline::before {
@@ -661,13 +685,13 @@ header span {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.courses h2 {
+/* .courses h2 {
   text-align: center;
   color: var(--color-gray);
   margin-bottom: 30px;
   font-size: 2rem;
   font-weight: 700;
-}
+} */
 
 .course-list {
   position: relative;
@@ -729,12 +753,12 @@ header span {
   align-items: center;
 }
 
-.about-me h2 {
+/* .about-me h2 {
   color: #ffffff;
   margin-bottom: 24px;
   font-size: 2rem;
   font-weight: 700;
-}
+} */
 
 .about-me p {
   font-size: 1.1rem;
