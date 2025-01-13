@@ -34,5 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Exibe a seção de projetos por padrão
-  showSection(projectsSection);
+  showSection(pagesSection);
 });
