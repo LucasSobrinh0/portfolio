@@ -127,6 +127,14 @@ header span {
     font-size: 2rem;
     line-height: 2.5rem;
   }
+
+  .header-links{
+ gap: 20px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+  }
 }
 
 /* ------------------------------
@@ -147,18 +155,17 @@ header span {
   gap: 20px;
   margin: 0 auto;
   flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .item_system {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  border-radius: 8px;
   transition: transform 0.2s ease;
-  width: 250px;
-  height: 150px;
   overflow: hidden;
+  width: 200px;
+  height: 100px;
 }
 
 .item_system img {
@@ -174,8 +181,8 @@ header span {
 /* Ajustes de responsividade p/ Skills */
 @media (max-width: 1440px) {
   .item_system {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
   }
 }
 
@@ -192,7 +199,9 @@ header span {
     height: 100px;
   }
   .container_system{
-    gap: -0px;
+    gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -244,6 +253,10 @@ header span {
 @media (max-width: 520px) {
   .links{
     gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .nav-link {
     font-size: 0.8rem;
@@ -261,7 +274,10 @@ header span {
 ------------------------------ */
 .container_sections_links {
   background-color: var(--color-bg-gray);
-  padding: 40px 0; /* Espaçamento vertical entre links e conteúdo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* As seções usam o background do container para não ter buracos brancos */
