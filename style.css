@@ -4,7 +4,7 @@
 :root {
   --color-bg-gray: #111111;      /* Fundo global */
   --color-gray: #c2c2c2;         /* Texto padrão em cinza claro */
-  --color-bg-gray-secondary: #222222; /* Fundo de cards / seções */
+  --color-bg-gray-secondary: #181818; /* Fundo de cards / seções */
   --card-bg-gray: #333333;       /* Fundo mais escuro para alguns elementos */
 }
 
@@ -71,7 +71,7 @@ header h1 {
 /* Texto principal em gradiente */
 header p {
   font-weight: bold;
-  font-size: 3.2rem;
+  font-size: 3rem;
   width: 40%;
   text-align: center;
   line-height: 3.5rem;
