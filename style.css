@@ -152,10 +152,10 @@ header span {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
   margin: 0 auto;
   flex-wrap: nowrap;
   flex-direction: row;
+  gap: 8rem;
 }
 
 .item_system {
@@ -164,7 +164,7 @@ header span {
   justify-content: center;
   transition: transform 0.2s ease;
   overflow: hidden;
-  width: 200px;
+  width: 100px;
   height: 100px;
 }
 
@@ -179,27 +179,30 @@ header span {
 }
 
 /* Ajustes de responsividade p/ Skills */
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
   .item_system {
-    width: 200px;
-    height: 100px;
   }
-}
+} */
 
 @media (max-width: 992px) {
   .item_system {
-    width: 120px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+  }
+  .container_system{
+    gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 576px) {
   .item_system {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
   }
   .container_system{
-    gap: 0px;
+    gap: 2rem;
     display: flex;
     flex-wrap: wrap;
   }
