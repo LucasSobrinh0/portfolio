@@ -2,350 +2,111 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZYjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- Google Fonts: Poppins (exemplo) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Seu CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <title>Portfolio Lucas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Sobrinho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- =========================
-       HEADER (Hero Section)
-  ========================== -->
-  <header>
-    <div class="selfie_image_container">
-      <img src="img_logo/selfie_of_me.png" alt="" class="selfie_image">
-    </div>
-    <h1>Olá, eu sou o Lucas</h1>
-    <p class="size_font_primary">Sênior em Tecnologia da Informação</p>
-    <span>lucas.sobrinho.crn@gmail.com</span>
-
-    <div class="header-links">
-      <a href="https://br.linkedin.com/in/lucas-sobrinho-c-b9b6661b9/en" target="_blank">
-        <i class="bi bi-linkedin"></i> Linkedin
-      </a>
-      <a href="https://github.com/LucasSobrinh0" target="_blank">
-        <i class="bi bi-github"></i> GitHub
-      </a>
-    </div>
-  </header>
-
-  <!-- =========================
-       SISTEMAS / SKILLS
-  ========================== -->
-  <section class="list_system">
-    <div class="container_system">
-      <!-- <div class="item_system"><img src="img_logo/python.png" alt="Python"></div>
-      <div class="item_system"><img src="img_logo/linux.png" alt="Linux"></div>
-      <div class="item_system"><img src="img_logo/webflow.png" alt="Webflow"></div>
-      <div class="item_system"><img src="img_logo/windows.png" alt="Windows"></div> -->
-      <div class="item_system"><img src="img_logo/Python-logo-notext.png" alt="Python"></div>
-      <div class="item_system"><img src="img_logo/webflow-logo-notext.png" alt="Webflow"></div>
-      <div class="item_system"><img src="img_logo/linux-logo-notext.png" alt="Linux"></div>
-      <div class="item_system"><img src="img_logo/windows-logo-notext.png" alt="Windows"></div>
-    </div>
-  </section>
-
-  <!-- =========================
-       LINKS DE NAVEGAÇÃO
-  ========================== -->
-  <div class="links">
-    <a id="btn-projects" class="nav-link">
-      <i class="bi bi-folder"></i> Projetos
-    </a>
-    <a id="btn-pages" class="nav-link">
-      <i class="bi bi-layout-text-sidebar-reverse"></i> Sites
-    </a>
-    <a id="btn-awards" class="nav-link">
-      <i class="bi bi-trophy"></i> Premiações
-    </a>
-  </div>
-
-  <div class="container_sections_links">
-    <!-- =========================
-       SEÇÃO DE PREMIAÇÕES
-  ========================== -->
-    <div id="awards-section" class="content hidden">
-      <div class="container">
-        <h2 class="size_font_primary">Minhas Premiações</h2>
-        <p class="intro_text">Aqui estão as premiações que já conquistei dentro da universidade e fora dela.</p>
-
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col-md-4">
-            <div class="premiacao-card">
-              <div class="card-header">
-                <i class="bi bi-trophy-fill icon-1x"></i>
-                <h3>Top 1 - Tech Experience</h3>
-              </div>
-              <div class="card-body">
-                <p>
-                  Liderei e desenvolvi um sistema para o Mercado Garibaldi.
-                </p>
-                <a href="https://github.com/CarolScript/MG" target="_blank" class="btn-link">
-                  Repositório do Projeto
-                </a>
-                <span class="data">Novembro 2024</span>
-              </div>
+    <main class="main-content">
+        <section class="intro-box">
+            <h2>Hi! I’m Lucas Sobrinho</h2>
+            <p>Data & Systems Specialist | Turning information into smart decisions.</p>
+            <div class="icons-social-media">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
             </div>
-          </div>
+            <a href="#about" class="btn">ABOUT ME</a>
+        </section>
+    </main>
 
-          <!-- Card 2 -->
-          <div class="col-md-4">
-            <div class="premiacao-card">
-              <div class="card-header">
-                <i class="bi bi-emoji-smile-fill icon-1x"></i>
-                <h3>Top 2 - Tech Experience</h3>
-              </div>
-              <div class="card-body">
-                <p>
-                  Fui premiado com o 2º lugar em um Workshop feito pela faculdade Invest.
 
-                </p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7124401110185828352/" target="_blank"
-                  class="btn-link">
-                  Postagem no Linkedin
-                </a>
-                <span class="data">Outubro 2023</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-md-4">
-            <div class="premiacao-card">
-              <div class="card-header">
-                <i class="bi bi-people-fill icon-1x"></i>
-                <h3>Destaque - Projeto Integrador</h3>
-              </div>
-              <div class="card-body">
-                <p>
-                  Fui reconhecido pelo projeto "Letras Vivas" dentro da faculdade invest.
-                  </p>
-                <a href="https://lucassobrinh0.github.io/letrasvivas/" target="_blank" class="btn-link">
-                  LetrasVivas
-                </a>
-                <span class="data">Dezembro 2024</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Adicione mais cards conforme necessário -->
+    <section class="about-me" id="about">
+        <div class="image-div"></div>
+        <div class="text-div">
+            <h3>About Me</h3>
+            <p>
+                My name is Lucas, I’m 20 years old, and I’ve been passionate about computers since I was six. At 15, I
+                discovered programming through Python, and I’ve been building and learning ever since.
+                <br> <br>
+                I currently dedicate my time to studying business rules, development, data analysis, and cybersecurity.
+                I also enjoy reading about logic, financial education, and psychology — always aiming to grow both
+                technically and personally.
+            </p>
         </div>
-      </div>
-    </div>
-
-    <!-- =========================
-       SEÇÃO DE PROJETOS
-  ========================== -->
-    <div id="projects-section" class="content hidden">
-      <div class="container-title">
-        <h2 class="size_font_primary">Projetos open sources criados por mim. Onde criei o back-end completamente do zero
-          e liderei a criação de
-          cada um.</h2>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <img src="img/controle_de_estoque.gif" alt="Projeto 1">
-          <div class="card-body">
-            <h3>Sistema de controle de estoque - Full Stack - Python e JavaScript</h3>
-            <!-- <p> -->
-              <!-- Um projeto de controle de estoque full stack utilizando Django Rest Framework, sistemas
-              de token com JWT e Javascript.
-            </p> -->
-            <a href="https://github.com/LucasSobrinh0/controle-de-estoque-rest-api" class="btn" target="_blank">
-              Acessar GitHub
-            </a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/agendamento.gif" alt="Projeto 2">
-          <div class="card-body">
-            <h3>Sistema de agendamento de consultas médicas - Full Stack - Python e Javascript</h3>
-            <!-- <p> -->
-              <!-- Esse sistema foi um projeto da faculdade onde apresentamos uma plataforma de agendamento médico.
-              Utilizamos inputmask para formatação de dados como CPF e telefone, JavaScript, Python, JWT e Bootstrap.
-            </p> -->
-            <a href="https://github.com/LucasSobrinh0/projeto_agendamento" class="btn" target="_blank">
-              Acessar GitHub
-            </a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/cadastro_de_paciente.gif" alt="Projeto 3">
-          <div class="card-body">
-            <h3>Cadastro de pacientes - Full Stack - Python e JavaScript</h3>
-            <!-- <p>
-              Um projeto simples de cadastro de pacientes apenas para aprendizado de como tratar dados com API REST.
-            </p> -->
-            <a href="https://github.com/LucasSobrinh0/cadastro_de_paciente" class="btn" target="_blank">
-              Acessar GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- =========================
-       SEÇÃO DE Sites
-  ========================== -->
-
-    <div id="pages-section" class="content hidden">
-      <div class="container-title">
-        <h2 class="size_font_primary">Sites profissionais feitos por mim. Onde utilizei WebFlow, HTML, CSS e JavaScript.
-        </h2>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <img src="img/vilarouca_auxilio_acidente.png" alt="VILAROUCA_AUXILIO_ACIDENTE">
-          <div class="card-body">
-            <h3>Vilarouca Advocacia | Auxilio Acidente</h3>
-            <!-- <p>
-            </p> -->
-            <a href="https://www.vilarouca.com/auxilio-doenca-acidente" class="btn" target="_blank">
-              Acessar Site
-            </a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/vilarouca_previdenciario.png" alt="VILAROUCA_PREVIDENCIARIO">
-          <div class="card-body">
-            <h3>Vilarouca Advocacia | Previdenciário</h3>
-            <!-- <p>
-            </p> -->
-            <a href="https://www.vilarouca.com/previdenciario" class="btn" target="_blank">
-              Acessar Site
-            </a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/vilarouca_aposentadoria.png" alt="VILAROUCA_APOSENTADORIA">
-          <div class="card-body">
-            <h3>Vilarouca Advocacia | Aposentadoria</h3>
-            <!-- <p>
-            </p> -->
-            <a href="https://www.vilarouca.com/previdenciario" class="btn" target="_blank">
-              Acessar Site
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section class="experience">
-    <h2 class="size_font_primary">Experiência Profissional</h2>
-    <div class="timeline">
-      <div class="job">
-        <h3>Analista de Sistemas / Auxiliar Informática</h3>
-        <h4>Vilarouca - Julho 2024 - Atualmente</h4>
-        <p>Implantei sistemas de automações com python, sistemas de chatbot inovadores, criações de páginas para trafego
-          pago, e aplicativos web e mobile com python e javascript.
-        </p>
-      </div>
-
-      <div class="job">
-        <h3>Auxiliar Informática</h3>
-        <h4>Atacadão S.A - Junho 2023 - Março 2024</h4>
-        <p>Gerenciei a infraestrutura de servidores corporativos em sistemas linux e windows. Cuidei da correção e
-          manutenção dos servidores de notas fiscais, gerenciei o data center da empresa, implementei sistemas de auto
-          atendimento, e sistemas de visualização de preço em tempo real.
-        </p>
-      </div>
-
-      <div class="job">
-        <h3>Aprendiz</h3>
-        <h4>Atacadão S.A - Março 2022 - Março 2023</h4>
-        <p>Como aprendiz administrativo, coordenei as rotinas de RH, Almoxarifado, Cobrança e Gerência. Onde otimizei a
-          rotina com melhorias na parte organizacional, e cuidei da parte administrativa do estoque da loja e logistica
-          dos setores.
-        </p>
-      </div>
-
-      <div class="job">
-        <h3>Experiência em projetos pessoais</h3>
-        <h4>Desenvolvimento</h4>
-        <p>Aprimorei minhas habilidades em desenvolvimento web através de projetos pessoais hospedados no GitHub, onde
-          ajudei alunos que tinham dificuldades em frameworks web de linguagens de programação como Django.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="container_courses">
-    <section class="courses">
-      <h2 class="size_font_primary">Educação</h2>
-      <div class="course-list">
-        <div class="course">
-          <h3>Analise e Desenvolvimento de Sistemas</h3>
-          <h4>Invest - Fevereiro de 2023 - Cursando</h4>
-          <p>Atualmente estou no terceiro semestre. Fui capaz de desenvolver habilidades em programação web usando
-            HTML, CSS, JavaScript e Python. Também aprendi SCRUM para melhorar a gestão de projetos e aprimorei
-            meu conhecimento em segurança da informação para proteger dados. Estas experiências estão
-            aprimorando minhas capacidades técnicas e de comunicação.</p>
-        </div>
-        <div class="course">
-          <h3>Programação em Python do básico ao avançado</h3>
-          <h4>Udemy - Concluído em Abril 2024</h4>
-          <p>Adquiri conhecimento
-            profundo em Python sem o uso de frameworks. Este curso me proporcionou uma base sólida na linguagem,
-            preparando-me para aplicar este conhecimento em diversos contextos de programação.</p>
-        </div>
-        <div class="course">
-          <h3>Programação Shell Script - Automatizando Rotinas no Linux</h3>
-          <h4>Udemy - Concluído em Setembro 2023</h4>
-          <p>Este curso foi capaz de me ajudar a automatizar rotinas e aprofundar minha compreensão da lógica de
-            programação. Este domínio me
-            possibilitou otimizar processos e aumentar a eficiência operacional de maneira significativa.</p>
-        </div>
-        <div class="course">
-          <h3>Aprendizagem Profissional de Qualificação em Serviços de Supermercado</h3>
-          <h4>SENAC - Concluído em Março de 2023</h4>
-          <p>Completei um curso de Aprendizagem Profissional em Serviços de Supermercado, onde desenvolvi
-            habilidades práticas em atendimento ao cliente, gestão de estoques e operações de caixa. Este curso
-            ampliou minha capacidade de trabalhar em equipe e minha proatividade, preparando-me para desafios em
-            ambientes de varejo dinâmicos.</p>
-        </div>
-        <div class="course">
-          <h3>Assistente Administrativo com informática</h3>
-          <h4>SENAI - Concluído em Novembro de 2020</h4>
-          <p>Aprimorei minhas habilidades com o Pacote Office e em rotinas administrativas, melhorando
-            significativamente minha organização e eficiência. Também desenvolvi minhas competências
-            comunicativas e proatividade, essenciais para um desempenho eficaz e colaborativo.</p>
-        </div>
-      </div>
     </section>
-  </div>
 
-  <section class="about-me">
-    <h2 class="size_font_primary">Sobre Mim</h2>
-    <p>Meu nome é Lucas e tenho 20 anos. Desde os 6 anos de idade, sou fascinado por computadores, sempre buscando
-      entender e
-      resolver problemas de sistema. Meu interesse por programação começou aos 15 anos, em 2021, quando comecei a
-      aprender Python. Atualmente, dedico parte do meu tempo à estudar mais sobre o mundo da programação/Cyber
-      Security e à
-      leitura de livros sobre lógica, educação financeira e
-      psicologia, buscando aprimorar não apenas minhas habilidades técnicas, mas também minhas competências
-      interpessoais. Além disso, gosto de desenvolver projetos pessoais que me permitem melhorar continuamente
-      minhas habilidades em desenvolvimento web, como o projeto integrador da faculdade 'Me Encontrando', que visa
-      facilitar o acesso a
-      recursos psicológicos por meio da tecnologia.</p>
-  </section>
-  <!-- Script JavaScript -->
-  <script src="script.js"></script>
-  <!-- Bootstrap Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-WsPTn3ZBj0ZgjMwuKfSfnuhFQKqZZP28LcHGp5ZVi6qfXki2v44qBtENYzA/S+fZ"
-    crossorigin="anonymous"></script>
+    <section class="areas-of-knowledge">
+        <div class="area">
+            <i class="fab fa-python"></i>
+            <p>I have three years of experience automating tasks, developing systems, and optimizing workflows using Python and Linux.</p>
+        </div>
+        <div class="area">
+            <i class="bi bi-clipboard2-data"></i>
+            <p>Passionate about creating efficient solutions that save time and improve productivity.</p>
+        </div>
+        <div class="area">
+            <i class="bi bi-database-fill"></i>
+            <p>Skilled in frameworks such as NumPy, Pandas, Selenium, and OpenPyXL, with solid knowledge of databases like SQL and PostgreSQL.</p>
+        </div>
+    </section>
+
+
+
+
+    <section class="section-projects">
+        <h3>UI/UX Design - Projects</h3>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="img/auxilio.jpg" alt="Auxílio Acidente" />
+                <p>Vilarouca Advocacia | Auxílio Acidente</p>
+                <a href="#" class="btn-visit">Visitar Página</a>
+            </div>
+
+            <div class="project-card">
+                <img src="img/aposentadoria.jpg" alt="Aposentadoria" />
+                <p>Vilarouca Advocacia | Aposentadoria</p>
+                <a href="#" class="btn-visit">Visitar Página</a>
+            </div>
+
+            <div class="project-card">
+                <img src="img/previdenciario.jpg" alt="Previdenciário" />
+                <p>Vilarouca Advocacia | Previdenciário</p>
+                <a href="#" class="btn-visit">Visitar Página</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="professional-experience">
+        <h2>Professional Experience</h2>
+    
+        <div class="experience-card">
+            <h3>Systems Analyst / IT Assistant</h3>
+            <span class="company">Vilarouca / Doutor Soluções • July 2024 – Present</span>
+            <p>
+                Implemented automation systems using Python and frameworks like Selenium, OpenPyXL, Pandas, and NumPy.
+                Developed RESTful APIs with Django Rest Framework, created innovative chatbots, built landing pages for paid traffic,
+                and developed web/mobile applications using Python and JavaScript.
+            </p>
+        </div>
+    
+        <div class="experience-card">
+            <h3>IT Assistant</h3>
+            <span class="company">Atacadão S.A / Carrefour • March 2022 – March 2024</span>
+            <p>
+                Managed corporate server infrastructure on Linux and Windows systems. Automated tasks using Bash scripting,
+                maintained NF-e servers, administered the company’s data center, and implemented self-service and
+                real-time price display systems.
+            </p>
+        </div>
+    </section>
+    
+
 </body>
 
 </html>
