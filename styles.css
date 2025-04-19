@@ -101,6 +101,8 @@
     flex-wrap: wrap;
     min-height: 60vh;
     background-color: #1a1a1a;
+    justify-content: center;
+    align-items: center;
   }
   
   .image-div,
@@ -117,6 +119,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    max-width: 30% ;
   }
   
   .image-div img {
@@ -136,6 +139,7 @@
   .text-div {
     flex-direction: column;
     text-align: left;
+    max-width: 50%;
   }
   
   .text-div h3 {
@@ -176,7 +180,7 @@
   }
   
   .section-projects {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     background-color: #1a1a1a;
     color: #ffffff;
     text-align: center;
@@ -275,6 +279,7 @@
   .flex-experience{
     display: flex;
     flex-direction: row;
+    gap: 1rem;
     }
   
   /* Card de experiência */
