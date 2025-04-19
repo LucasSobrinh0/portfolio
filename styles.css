@@ -159,6 +159,10 @@
     .about-me {
       flex-direction: column-reverse;
     }
+
+    .text-div{
+      max-width: 90%;
+    }
   
     .text-div, .image-div {
       flex: 1 1 100%;
