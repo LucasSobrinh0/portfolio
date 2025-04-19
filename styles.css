@@ -272,6 +272,11 @@
     text-align: center;
   }
   
+  .flex-experience{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
   
   /* Card de experiência */
   .experience-card {
@@ -311,6 +316,12 @@
     color: #cccccc;
   }
   
+  @media (max-width: 1024px){
+    .flex-experience{
+      flex-direction: column;
+    }
+  }
+
   /* Responsivo */
   @media (max-width: 768px) {
     .experience-card {
