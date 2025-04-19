@@ -275,8 +275,7 @@
   .flex-experience{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-  }
+    }
   
   /* Card de experiência */
   .experience-card {
