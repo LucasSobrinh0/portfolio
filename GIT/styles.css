@@ -1,0 +1,62 @@
+:root {
+  --hero-gradient: radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.12), transparent 60%);
+}
+
+html[data-bs-theme="dark"] body {
+  background-color: #000000;
+}
+
+html[data-bs-theme="light"] body {
+  background-color: #ffffff;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  max-width: 680px;
+  opacity: 0.9;
+}
+
+/* brilho discreto no centro */
+main::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--hero-gradient);
+  pointer-events: none;
+}
+
+/* links da navbar com foco e hover elegantes */
+.nav-link {
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: var(--bs-secondary-bg);
+}
+
+/* botão de tema com leve vidro */
+#themeToggle {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* responsividade tipográfica */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
