@@ -1,227 +1,302 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="./styles.css">
-  <title>Lucas Portfolio</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas | Software Developer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<body>
-  <div class="viewport" id="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBase: '#0f172a', // Slate 900
+                        glowColor: '#22d3ee', // Cyan 400
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(34, 211, 238, 0.5)',
+                        'glow-hover': '0 0 25px rgba(34, 211, 238, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global Scroll Snap Settings */
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a; /* Fallback */
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Section Styling */
+        section {
+            height: 100vh; /* Full viewport height */
+            width: 100%;
+            scroll-snap-align: start; /* Snap to top of section */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22d3ee; 
+        }
+
+        /* Text Glow Class */
+        .text-glow {
+            color: #22d3ee;
+            text-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+        }
+        
+        /* Animation for Scroll Down Arrow */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        .animate-bounce-custom {
+            animation: bounce 2s infinite;
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+            border-color: rgba(34, 211, 238, 0.3);
+        }
+
+        /* Custom Bullet Points */
+        ul.custom-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.custom-bullets li::before {
+            content: '•';
+            color: #22d3ee;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.2rem;
+            text-shadow: 0 0 5px rgba(34, 211, 238, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-darkBase antialiased selection:bg-glowColor selection:text-darkBase">
 
     <section id="home">
-      <div class="wrap">
-        <h1>
-          Hi, I am Lucas. I 
-          <span class="textGlow">build</span>,
-          <span class="textGlow">scale</span>, and
-          <span class="textGlow">ship</span> software systems end to end.
-        </h1>
+        <div class="text-center max-w-4xl z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+                Hi, I'm Lucas. <br class="hidden md:block" /> 
+                Software Developer <br class="md:hidden" />
+                <span class="text-glow">PHP, Python & Javascript.</span>
+            </h1>
+            
+            <p class="text-slate-400 text-lg md:text-xl mb-8 font-light">
+                Backend, automation, and frontend with measurable performance.
+            </p>
 
-        <p>Backend, automation, and frontend with measurable performance.</p>
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
 
-        <div class="chips">
-          <span class="chip"><span class="dot"></span>APIs</span>
-          <span class="chip"><span class="dot"></span>RPA</span>
-          <span class="chip"><span class="dot"></span>Performance</span>
-          <span class="chip"><span class="dot"></span>Testing</span>
-          <span class="chip"><span class="dot"></span>Clean delivery</span>
+                <a href="mailto:email@example.com" class="px-8 h-12 flex items-center justify-center rounded-full border border-slate-600 text-slate-300 hover:border-glowColor hover:text-glowColor transition-all duration-300 font-medium">
+                    Contact
+                </a>
+            </div>
         </div>
 
-        <div class="actions">
-          <a class="btn btnGlow" href="#" title="LinkedIn">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.93v5.67H9.3V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28zM5.34 7.43c-1.15 0-2.08-.94-2.08-2.09 0-1.15.93-2.08 2.08-2.08 1.16 0 2.09.93 2.09 2.08 0 1.15-.93 2.09-2.09 2.09zM7.12 20.45H3.56V9h3.56v11.45z"/>
-            </svg>
-          </a>
-
-          <a class="btn btnGlow" href="#" title="GitHub">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 .5C5.73.5.75 5.68.75 12.18c0 5.2 3.33 9.6 7.95 11.16.58.11.79-.26.79-.58v-2.1c-3.23.73-3.91-1.6-3.91-1.6-.52-1.38-1.28-1.74-1.28-1.74-1.05-.74.08-.73.08-.73 1.16.09 1.78 1.24 1.78 1.24 1.03 1.83 2.71 1.3 3.37.99.1-.77.4-1.3.73-1.6-2.58-.3-5.29-1.34-5.29-5.98 0-1.32.44-2.4 1.16-3.25-.12-.3-.5-1.52.11-3.17 0 0 .95-.31 3.1 1.24a10.2 10.2 0 0 1 2.82-.4c.96 0 1.93.13 2.82.4 2.15-1.55 3.1-1.24 3.1-1.24.61 1.65.23 2.87.11 3.17.72.85 1.16 1.93 1.16 3.25 0 4.66-2.71 5.67-5.3 5.97.41.38.79 1.13.79 2.29v3.39c0 .32.2.7.8.58 4.62-1.56 7.95-5.96 7.95-11.16C23.25 5.68 18.27.5 12 .5z"/>
-            </svg>
-          </a>
-
-          <a class="btn btnGlow" href="mailto:lucas@yourdomain.com" title="Email">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-          </a>
-
-          <button class="btn btnGhost" type="button" data-go="contact">Contact</button>
-        </div>
-      </div>
-
-      <div class="scrollHintBottom">
-        <button class="scrollBtn" type="button" data-next title="Scroll">
-          <span class="arrow"></span>
-        </button>
-      </div>
+        <a href="#experiences" class="absolute bottom-10 cursor-pointer animate-bounce-custom flex flex-col items-center gap-2 group">
+            <span class="text-xs text-slate-500 group-hover:text-glowColor transition-colors">Scroll</span>
+            <i class="fas fa-chevron-down text-glowColor text-xl"></i>
+        </a>
     </section>
 
-    <section id="expertise">
-      <div class="wrap">
-        <h2>Expertise</h2>
+    <!-- <section id="expertise">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Expertise</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+            
+            <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
+                <h3 class="text-2xl font-bold mb-6 text-glow">PHP</h3>
+                <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
+                    <li>Symfony</li>
+                    <li>Laravel</li>
+                    <li>APIs</li>
+                </ul>
+            </div>
 
-        <div class="grid">
-          <div class="card cardBig">
-            <h3><span class="textGlow">PHP</span></h3>
-            <ul class="list">
-              <li class="li"><span class="dot"></span><span>Symfony</span></li>
-              <li class="li"><span class="dot"></span><span>Laravel</span></li>
-              <li class="li"><span class="dot"></span><span>APIs</span></li>
-            </ul>
-          </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
+                <h3 class="text-2xl font-bold mb-6 text-glow">Python</h3>
+                <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
+                    <li>Django</li>
+                    <li>Selenium</li>
+                    <li>TensorFlow</li>
+                </ul>
+            </div>
 
-          <div class="card cardBig">
-            <h3><span class="textGlow">Python</span></h3>
-            <ul class="list">
-              <li class="li"><span class="dot"></span><span>Django</span></li>
-              <li class="li"><span class="dot"></span><span>Selenium</span></li>
-              <li class="li"><span class="dot"></span><span>TensorFlow</span></li>
-            </ul>
-          </div>
-
-          <div class="card cardBig">
-            <h3><span class="textGlow">JavaScript</span></h3>
-            <ul class="list">
-              <li class="li"><span class="dot"></span><span>jQuery</span></li>
-              <li class="li"><span class="dot"></span><span>React</span></li>
-              <li class="li"><span class="dot"></span><span>Alpine</span></li>
-            </ul>
-          </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
+                <h3 class="text-2xl font-bold mb-6 text-glow">Javascript</h3>
+                <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
+                    <li>Jquery</li>
+                    <li>React</li>
+                    <li>Alpine</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="sub">Production first. Speed first. Clean first.</div>
-      </div>
-    </section>
+    </section> -->
 
     <section id="experiences">
-      <div class="wrap">
-        <h2>Experiences</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white">Experiences</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl px-4">
+            
+            <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-1">Software Developer</h3>
+                <div class="text-sm text-glow mb-4">Alow • Jun 2025 – Present</div>
+                <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
+                    <li>Reduced load times from minutes to milliseconds using Ajax, DataTables, and offset pagination.</li>
+                    <li>Built Telecom RPA with Python and Selenium to process high volume invoice data.</li>
+                    <li>Optimized Symfony codebase, cutting dependencies by seventy percent.</li>
+                    <li>Improved UI using dynamic server side rendering with real time filtering.</li>
+                    <li>Implemented automated testing, sharply reducing sprint bug volume.</li>
+                    <li>Redesigned critical UX flows using modal based navigation.</li>
+                </ul>
+            </div>
 
-        <div class="grid">
-          <div class="card">
-            <h3>Systems Analyst / IT Assistant</h3>
-            <div class="meta">Vilarouca / Doutor Soluções · July 2024 to July 2025</div>
-            <ul class="list">
-              <li class="li"><span class="dot"></span><span>Built RPA with Selenium for real workflows.</span></li>
-              <li class="li"><span class="dot"></span><span>Delivered REST APIs with Django REST Framework.</span></li>
-              <li class="li"><span class="dot"></span><span>Shipped chatbots and landing pages with clear metrics.</span></li>
-            </ul>
-          </div>
+            <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-1">Systems Analyst</h3>
+                <div class="text-sm text-glow mb-4">Vilarouca / Doutor Soluções • July 2024 – July 2025</div>
+                <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
+                    <li>Implemented automation systems using Python with Selenium, Pandas, and NumPy.</li>
+                    <li>Developed REST APIs using Django Rest Framework.</li>
+                    <li>Created chatbots focused on operational efficiency.</li>
+                    <!-- <li>Built high performance web and mobile applications.</li> -->
+                </ul>
+            </div>
 
-          <div class="card">
-            <h3>IT Assistant</h3>
-            <div class="meta">Atacadão S.A / Carrefour · March 2022 to March 2024</div>
-            <ul class="list">
-              <li class="li"><span class="dot"></span><span>Owned Linux and Windows infrastructure operations.</span></li>
-              <li class="li"><span class="dot"></span><span>Automated routines with Bash for reliability.</span></li>
-              <li class="li"><span class="dot"></span><span>Supported NF e and data center workloads end to end.</span></li>
-            </ul>
-          </div>
+            <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-1">IT Assistant</h3>
+                <div class="text-sm text-glow mb-4">Atacadão S.A / Carrefour • March 2022 – March 2024</div>
+                <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
+                    <li>Managed Linux and Windows infrastructure environments.</li>
+                    <li>Automated administrative routines using Bash scripts.</li>
+                    <li>Maintained NF e server operations.</li>
+                    <li>Implemented real time price display systems for retail.</li>
+                </ul>
+            </div>
 
-          <div class="card">
-            <h3>Software Developer</h3>
-            <div class="meta">Alow · June 2025 to Present</div>
-            <ul class="list">
-              <li class="li"><span class="dot"></span><span>Cut pagination load time from minutes to milliseconds with MySQL offset, PHP, Ajax, jQuery, and DataTables.</span></li>
-              <li class="li"><span class="dot"></span><span>Built telecom billing RPA with Selenium, regex, and high volume processing.</span></li>
-              <li class="li"><span class="dot"></span><span>Reduced duplication by about 70 percent with Symfony static utilities and stronger tests.</span></li>
-            </ul>
-          </div>
         </div>
-      </div>
     </section>
 
+
     <section id="projects">
-      <div class="wrap">
-        <h2>Projects</h2>
-
-        <div class="grid">
-          <div class="card">
-            <h3>NuvemFin <span class="meta" style="display:inline;">Personal Project</span></h3>
-            <div class="tiny">Laravel · JavaScript · Postgres</div>
-            <div class="tags">
-              <span class="tag">Finance control</span>
-              <span class="tag">Multi tenant</span>
-              <span class="tag">Production mindset</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Projects</h2>
+        
+        <a href="#">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+                
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-glowColor transition-all duration-300 group md:col-start-2">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-glowColor transition-colors">NuvemFin</h3>
+                        <span class="text-xs border border-slate-500 px-2 py-1 rounded text-slate-400">Personal</span>
+                    </div>
+                    
+                    <p class="text-glow text-sm font-mono mb-4">Laravel • Javascript • Postgres</p>
+                    
+                    <p class="text-slate-300 mb-2 font-medium">Objective:</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Robust financial control system designed to test and implement cutting-edge monolithic architectures.
+                    </p>
+                </div>
+            
             </div>
-            <div class="fine" style="margin-top:10px;">Built to validate patterns, performance, and clean deployment.</div>
-          </div>
-
-          <div class="card">
-            <h3>Offset Pagination Engine <span class="meta" style="display:inline;">Case Study</span></h3>
-            <div class="tiny">PHP · MySQL · Ajax · DataTables</div>
-            <div class="tags">
-              <span class="tag">Milliseconds UX</span>
-              <span class="tag">Server driven UI</span>
-              <span class="tag">Real time filtering</span>
-            </div>
-            <div class="fine" style="margin-top:10px;">Designed for speed at scale with predictable query patterns.</div>
-          </div>
-
-          <div class="card">
-            <h3>Telecom Billing RPA <span class="meta" style="display:inline;">Case Study</span></h3>
-            <div class="tiny">Python · Selenium · Regex</div>
-            <div class="tags">
-              <span class="tag">High volume</span>
-              <span class="tag">Stable automation</span>
-              <span class="tag">Operational impact</span>
-            </div>
-            <div class="fine" style="margin-top:10px;">Automates billing collection and reduces manual operations.</div>
-          </div>
-        </div>
-
-        <div class="sub">Strong fundamentals. Strong delivery. Strong results.</div>
-      </div>
+        </a>
     </section>
 
     <section id="awards">
-      <div class="wrap">
-        <h2>Awards</h2>
-
-        <div class="grid">
-          <div class="card">
-            <h3>First Place · Tech Experience 2025 · Univest</h3>
-            <div class="tiny">Inventory control with forecasting and analytics.</div>
-            <div class="tags">
-              <span class="tag">Flask</span>
-              <span class="tag">Scikit Learn</span>
-              <span class="tag">Prophet</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Chart.js</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Awards & Recognition</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl px-4 mb-16">
+            
+            <div class="relative pl-8 border-l-2 border-slate-700">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-glowColor shadow-glow"></div>
+                <h3 class="text-xl font-bold text-white mb-1">1° Place - Tech Experience 2025</h3>
+                <span class="text-sm text-slate-500 block mb-4">Faculdade Univest</span>
+                
+                <p class="text-slate-300 mb-3 text-sm">
+                    Developed an AI-driven market inventory control system predicting stock shortages.
+                </p>
+                <div class="text-xs font-mono text-glow">
+                    Python (Flask, Scikit-Learn, Prophet) • JS (Chart.js)
+                </div>
             </div>
-          </div>
 
-          <div class="card">
-            <h3>Second Place · Tech Experience 2024 · Univest</h3>
-            <div class="tiny">One week delivery. High ownership. Clean execution.</div>
-            <div class="tags">
-              <span class="tag">Prisma ORM</span>
-              <span class="tag">API fixes</span>
-              <span class="tag">PO and PM roles</span>
-              <span class="tag">UI prototyping</span>
+            <div class="relative pl-8 border-l-2 border-slate-700">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-500"></div>
+                <h3 class="text-xl font-bold text-white mb-1">2° Place - Tech Experience 2024</h3>
+                <span class="text-sm text-slate-500 block mb-4">Faculdade Univest</span>
+                
+                <p class="text-slate-300 mb-3 text-sm">
+                    Agile Challenge. Acted as PO/PM delivering real software solutions.
+                </p>
+                <ul class="text-xs text-slate-400 list-disc pl-4 space-y-1">
+                    <li>Designed UI/UX prototypes.</li>
+                    <li>Implemented Prisma ORM & API integrations.</li>
+                    <li>Fixed critical backend performance bugs.</li>
+                </ul>
             </div>
-          </div>
 
-          <div class="card" id="contact">
-            <h3>Contact</h3>
-            <div class="tiny">Use the buttons on the first section.</div>
-            <div class="tags">
-              <span class="tag">PHP</span>
-              <span class="tag">Python</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">APIs</span>
-              <span class="tag">RPA</span>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <button onclick="document.getElementById('home').scrollIntoView()" class="mt-8 px-6 py-2 rounded-full border border-slate-600 text-slate-400 hover:text-white hover:border-white transition-all text-sm">
+            Back to Top <i class="fas fa-arrow-up ml-2"></i>
+        </button>
     </section>
 
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
