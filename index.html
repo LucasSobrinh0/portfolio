@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas | Software Developer</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -42,16 +43,19 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #0f172a; /* Fallback */
+            background-color: #0f172a;
+            /* Fallback */
             color: white;
             overflow-x: hidden;
         }
 
         /* Section Styling */
         section {
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
+            /* Full viewport height */
             width: 100%;
-            scroll-snap-align: start; /* Snap to top of section */
+            scroll-snap-align: start;
+            /* Snap to top of section */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -65,15 +69,18 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #0f172a; 
+            background: #0f172a;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #1e293b; 
+            background: #1e293b;
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
-            background: #22d3ee; 
+            background: #22d3ee;
         }
 
         /* Text Glow Class */
@@ -81,13 +88,27 @@
             color: #22d3ee;
             text-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
         }
-        
+
         /* Animation for Scroll Down Arrow */
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-10px);}
-            60% {transform: translateY(-5px);}
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
         }
+
         .animate-bounce-custom {
             animation: bounce 2s infinite;
         }
@@ -96,6 +117,7 @@
         .card-hover {
             transition: all 0.3s ease;
         }
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
@@ -108,6 +130,7 @@
             padding-left: 1.5rem;
             margin-bottom: 0.5rem;
         }
+
         ul.custom-bullets li::before {
             content: '•';
             color: #22d3ee;
@@ -119,87 +142,94 @@
         }
     </style>
 </head>
+
 <body class="bg-darkBase antialiased selection:bg-glowColor selection:text-darkBase">
 
     <section id="home">
         <div class="text-center max-w-4xl z-10">
             <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
-                Hi, I'm Lucas. <br class="hidden md:block" /> 
+                Hi, I'm Lucas. <br class="hidden md:block" />
                 Software Developer <br class="md:hidden" />
                 <span class="text-glow">PHP, Python & Javascript.</span>
             </h1>
-            
+
             <p class="text-slate-400 text-lg md:text-xl mb-8 font-light">
                 Backend, automation, and frontend with measurable performance.
             </p>
 
             <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                <a href="https://www.linkedin.com/in/lucas-sobrinho-c/" target="_blank" rel="noopener noreferrer"
+                    class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
                     <i class="fab fa-linkedin-in text-xl"></i>
                 </a>
-                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                <a href="https://github.com/LucasSobrinh0" target="_blank" rel="noopener noreferrer"
+                    class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
                     <i class="fab fa-github text-xl"></i>
                 </a>
-                <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
-                    <i class="fas fa-envelope text-xl"></i>
-                </a>
+                <!-- <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a> -->
 
-                <a href="mailto:email@example.com" class="px-8 h-12 flex items-center justify-center rounded-full border border-slate-600 text-slate-300 hover:border-glowColor hover:text-glowColor transition-all duration-300 font-medium">
+                <a href="mailto:lucas.sobrinho.crn@gmail.com"
+                    class="px-8 h-12 flex items-center justify-center rounded-full border border-slate-600 text-slate-300 hover:border-glowColor hover:text-glowColor transition-all duration-300 font-medium">
                     Contact
                 </a>
             </div>
         </div>
 
-        <a href="#experiences" class="absolute bottom-10 cursor-pointer animate-bounce-custom flex flex-col items-center gap-2 group">
+        <a href="#experiences"
+            class="absolute bottom-10 cursor-pointer animate-bounce-custom flex flex-col items-center gap-2 group">
             <span class="text-xs text-slate-500 group-hover:text-glowColor transition-colors">Scroll</span>
             <i class="fas fa-chevron-down text-glowColor text-xl"></i>
         </a>
     </section>
 
     <!-- <section id="expertise">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Expertise</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Expertise</h2>
             
-            <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
-                <h3 class="text-2xl font-bold mb-6 text-glow">PHP</h3>
-                <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
-                    <li>Symfony</li>
-                    <li>Laravel</li>
-                    <li>APIs</li>
-                </ul>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+                
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
+                    <h3 class="text-2xl font-bold mb-6 text-glow">PHP</h3>
+                    <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
+                        <li>Symfony</li>
+                        <li>Laravel</li>
+                        <li>APIs</li>
+                    </ul>
+                </div>
 
-            <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
-                <h3 class="text-2xl font-bold mb-6 text-glow">Python</h3>
-                <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
-                    <li>Django</li>
-                    <li>Selenium</li>
-                    <li>TensorFlow</li>
-                </ul>
-            </div>
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
+                    <h3 class="text-2xl font-bold mb-6 text-glow">Python</h3>
+                    <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
+                        <li>Django</li>
+                        <li>Selenium</li>
+                        <li>TensorFlow</li>
+                    </ul>
+                </div>
 
-            <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
-                <h3 class="text-2xl font-bold mb-6 text-glow">Javascript</h3>
-                <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
-                    <li>Jquery</li>
-                    <li>React</li>
-                    <li>Alpine</li>
-                </ul>
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
+                    <h3 class="text-2xl font-bold mb-6 text-glow">Javascript</h3>
+                    <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
+                        <li>Jquery</li>
+                        <li>React</li>
+                        <li>Alpine</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section> -->
+        </section> -->
 
     <section id="experiences">
         <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white">Experiences</h2>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl px-4">
-            
-            <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
+
+            <div
+                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
                 <h3 class="text-xl font-bold text-white mb-1">Software Developer</h3>
                 <div class="text-sm text-glow mb-4">Alow • Jun 2025 – Present</div>
                 <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
-                    <li>Reduced load times from minutes to milliseconds using Ajax, DataTables, and offset pagination.</li>
+                    <li>Reduced load times from minutes to milliseconds using Ajax, DataTables, and offset pagination.
+                    </li>
                     <li>Built Telecom RPA with Python and Selenium to process high volume invoice data.</li>
                     <li>Optimized Symfony codebase, cutting dependencies by seventy percent.</li>
                     <li>Improved UI using dynamic server side rendering with real time filtering.</li>
@@ -208,7 +238,8 @@
                 </ul>
             </div>
 
-            <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
+            <div
+                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
                 <h3 class="text-xl font-bold text-white mb-1">Systems Analyst</h3>
                 <div class="text-sm text-glow mb-4">Vilarouca / Doutor Soluções • July 2024 – July 2025</div>
                 <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
@@ -219,7 +250,8 @@
                 </ul>
             </div>
 
-            <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
+            <div
+                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
                 <h3 class="text-xl font-bold text-white mb-1">IT Assistant</h3>
                 <div class="text-sm text-glow mb-4">Atacadão S.A / Carrefour • March 2022 – March 2024</div>
                 <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
@@ -236,38 +268,41 @@
 
     <section id="projects">
         <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Projects</h2>
-        
-        <a href="#">
+
+        <a href="https://nuvemfin.onrender.com/" target="_blank" rel="noopener noreferrer">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
-                
-                <div class="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-glowColor transition-all duration-300 group md:col-start-2">
+
+                <div
+                    class="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-glowColor transition-all duration-300 group md:col-start-2">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-bold text-white group-hover:text-glowColor transition-colors">NuvemFin</h3>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-glowColor transition-colors">NuvemFin
+                        </h3>
                         <span class="text-xs border border-slate-500 px-2 py-1 rounded text-slate-400">Personal</span>
                     </div>
-                    
+
                     <p class="text-glow text-sm font-mono mb-4">Laravel • Javascript • Postgres</p>
-                    
+
                     <p class="text-slate-300 mb-2 font-medium">Objective:</p>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Robust financial control system designed to test and implement cutting-edge monolithic architectures.
+                        Robust financial control system designed to test and implement cutting-edge monolithic
+                        architectures.
                     </p>
                 </div>
-            
+
             </div>
         </a>
     </section>
 
     <section id="awards">
         <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Awards & Recognition</h2>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl px-4 mb-16">
-            
+
             <div class="relative pl-8 border-l-2 border-slate-700">
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-glowColor shadow-glow"></div>
                 <h3 class="text-xl font-bold text-white mb-1">1° Place - Tech Experience 2025</h3>
                 <span class="text-sm text-slate-500 block mb-4">Faculdade Univest</span>
-                
+
                 <p class="text-slate-300 mb-3 text-sm">
                     Developed an AI-driven market inventory control system predicting stock shortages.
                 </p>
@@ -280,7 +315,7 @@
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-500"></div>
                 <h3 class="text-xl font-bold text-white mb-1">2° Place - Tech Experience 2024</h3>
                 <span class="text-sm text-slate-500 block mb-4">Faculdade Univest</span>
-                
+
                 <p class="text-slate-300 mb-3 text-sm">
                     Agile Challenge. Acted as PO/PM delivering real software solutions.
                 </p>
@@ -293,10 +328,64 @@
 
         </div>
 
-        <button onclick="document.getElementById('home').scrollIntoView()" class="mt-8 px-6 py-2 rounded-full border border-slate-600 text-slate-400 hover:text-white hover:border-white transition-all text-sm">
+        <button onclick="document.getElementById('home').scrollIntoView()"
+            class="mt-8 px-6 py-2 rounded-full border border-slate-600 text-slate-400 hover:text-white hover:border-white transition-all text-sm">
             Back to Top <i class="fas fa-arrow-up ml-2"></i>
         </button>
     </section>
+    <script>
+            (function () {
+                const sections = Array.from(document.querySelectorAll("section"));
+                let locked = false;
+
+                function currentIndex() {
+                    let best = 0;
+                    let bestDist = Infinity;
+
+                    for (let i = 0; i < sections.length; i++) {
+                        const r = sections[i].getBoundingClientRect();
+                        const dist = Math.abs(r.top);
+                        if (dist < bestDist) {
+                            bestDist = dist;
+                            best = i;
+                        }
+                    }
+                    return best;
+                }
+
+                function go(dir) {
+                    if (locked) return;
+                    locked = true;
+
+                    const i = currentIndex();
+                    const next = Math.max(0, Math.min(sections.length - 1, i + dir));
+
+                    sections[next].scrollIntoView({ behavior: "smooth", block: "start" });
+
+                    setTimeout(() => { locked = false; }, 700);
+                }
+
+                window.addEventListener("wheel", function (e) {
+                    e.preventDefault();
+                    if (e.deltaY > 0) go(1);
+                    else if (e.deltaY < 0) go(-1);
+                }, { passive: false });
+
+                let y0 = 0;
+                window.addEventListener("touchstart", function (e) {
+                    y0 = e.touches[0].clientY;
+                }, { passive: true });
+
+                window.addEventListener("touchend", function (e) {
+                    const y1 = e.changedTouches[0].clientY;
+                    const dy = y0 - y1;
+                    if (Math.abs(dy) < 40) return;
+                    if (dy > 0) go(1);
+                    else go(-1);
+                }, { passive: true });
+            })();
+    </script>
 
 </body>
+
 </html>
