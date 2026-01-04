@@ -1,142 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucas Sobrinho</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css">
+  <title>Lucas Portfolio</title>
 </head>
 
 <body>
-    <main class="main-content">
-        <section class="intro-box">
-            <h2>Hi! I’m Lucas Sobrinho</h2>
-            <p style="color:white">Data & Systems Specialist | Turning information into smart decisions.</p>
-            <p >lucas.sobrinho.crn@gmail.com</p>
-            <div class="icons-social-media">
-                <a href="https://www.linkedin.com/in/lucas-sobrinho-c/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/LucasSobrinh0" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
-            </div>
-            <a href="#about" class="btn">ABOUT ME</a>
-        </section>
-    </main>
+  <div class="viewport" id="viewport">
 
+    <section id="home">
+      <div class="wrap">
+        <h1>
+          Hi, I am Lucas. I 
+          <span class="textGlow">build</span>,
+          <span class="textGlow">scale</span>, and
+          <span class="textGlow">ship</span> software systems end to end.
+        </h1>
 
-    <section class="about-me" id="about">
-        <div class="image-div">
-            <img src="img/programming_img.jpg" alt="Lucas Sobrinho selfie" />
+        <p>Backend, automation, and frontend with measurable performance.</p>
+
+        <div class="chips">
+          <span class="chip"><span class="dot"></span>APIs</span>
+          <span class="chip"><span class="dot"></span>RPA</span>
+          <span class="chip"><span class="dot"></span>Performance</span>
+          <span class="chip"><span class="dot"></span>Testing</span>
+          <span class="chip"><span class="dot"></span>Clean delivery</span>
         </div>
-        <div class="text-div">
-            <h3>About Me</h3>
-            <p>
-                My name is Lucas, I’m 20 years old, and I’ve been passionate about computers since I was six. At 15, I
-                discovered programming through Python, and I’ve been building and learning ever since.
-                <br> <br>
-                I currently dedicate my time to studying business rules, development, data analysis, and cybersecurity.
-                I also enjoy reading about logic, financial education, and psychology — always aiming to grow both
-                technically and personally.
-            </p>
+
+        <div class="actions">
+          <a class="btn btnGlow" href="#" title="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.93v5.67H9.3V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28zM5.34 7.43c-1.15 0-2.08-.94-2.08-2.09 0-1.15.93-2.08 2.08-2.08 1.16 0 2.09.93 2.09 2.08 0 1.15-.93 2.09-2.09 2.09zM7.12 20.45H3.56V9h3.56v11.45z"/>
+            </svg>
+          </a>
+
+          <a class="btn btnGlow" href="#" title="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .5C5.73.5.75 5.68.75 12.18c0 5.2 3.33 9.6 7.95 11.16.58.11.79-.26.79-.58v-2.1c-3.23.73-3.91-1.6-3.91-1.6-.52-1.38-1.28-1.74-1.28-1.74-1.05-.74.08-.73.08-.73 1.16.09 1.78 1.24 1.78 1.24 1.03 1.83 2.71 1.3 3.37.99.1-.77.4-1.3.73-1.6-2.58-.3-5.29-1.34-5.29-5.98 0-1.32.44-2.4 1.16-3.25-.12-.3-.5-1.52.11-3.17 0 0 .95-.31 3.1 1.24a10.2 10.2 0 0 1 2.82-.4c.96 0 1.93.13 2.82.4 2.15-1.55 3.1-1.24 3.1-1.24.61 1.65.23 2.87.11 3.17.72.85 1.16 1.93 1.16 3.25 0 4.66-2.71 5.67-5.3 5.97.41.38.79 1.13.79 2.29v3.39c0 .32.2.7.8.58 4.62-1.56 7.95-5.96 7.95-11.16C23.25 5.68 18.27.5 12 .5z"/>
+            </svg>
+          </a>
+
+          <a class="btn btnGlow" href="mailto:lucas@yourdomain.com" title="Email">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+
+          <button class="btn btnGhost" type="button" data-go="contact">Contact</button>
         </div>
+      </div>
+
+      <div class="scrollHintBottom">
+        <button class="scrollBtn" type="button" data-next title="Scroll">
+          <span class="arrow"></span>
+        </button>
+      </div>
     </section>
 
-    <section class="areas-of-knowledge">
-        <div class="area">
-            <i class="fab fa-python"></i>
-            <p>I have three years of experience automating tasks, developing systems, and optimizing workflows using
-                Python and Linux.</p>
+    <section id="expertise">
+      <div class="wrap">
+        <h2>Expertise</h2>
+
+        <div class="grid">
+          <div class="card cardBig">
+            <h3><span class="textGlow">PHP</span></h3>
+            <ul class="list">
+              <li class="li"><span class="dot"></span><span>Symfony</span></li>
+              <li class="li"><span class="dot"></span><span>Laravel</span></li>
+              <li class="li"><span class="dot"></span><span>APIs</span></li>
+            </ul>
+          </div>
+
+          <div class="card cardBig">
+            <h3><span class="textGlow">Python</span></h3>
+            <ul class="list">
+              <li class="li"><span class="dot"></span><span>Django</span></li>
+              <li class="li"><span class="dot"></span><span>Selenium</span></li>
+              <li class="li"><span class="dot"></span><span>TensorFlow</span></li>
+            </ul>
+          </div>
+
+          <div class="card cardBig">
+            <h3><span class="textGlow">JavaScript</span></h3>
+            <ul class="list">
+              <li class="li"><span class="dot"></span><span>jQuery</span></li>
+              <li class="li"><span class="dot"></span><span>React</span></li>
+              <li class="li"><span class="dot"></span><span>Alpine</span></li>
+            </ul>
+          </div>
         </div>
-        <div class="area">
-            <i class="bi bi-clipboard2-data"></i>
-            <p>Passionate about creating efficient solutions that save time and improve productivity.</p>
-        </div>
-        <div class="area">
-            <i class="bi bi-database-fill"></i>
-            <p>Skilled in frameworks such as NumPy, Pandas, Selenium, and OpenPyXL, with solid knowledge of databases
-                like SQL and PostgreSQL.</p>
-        </div>
+
+        <div class="sub">Production first. Speed first. Clean first.</div>
+      </div>
     </section>
 
-    <section class="section-projects">
-        <h3>Vilarouca App - Support System</h3>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="img/vilarouca_login.png" alt="Login" />
-                <p>Vilarouca Advocacia | Login</p>
-            </div>
-            <div class="project-card">
-                <img src="img/vilarouca_dashboard.png" alt="Dashboard" />
-                <p>Vilarouca Advocacia | Dashboard</p>
-            </div>
-            <div class="project-card">
-                <img src="img/vilarouca_cadastrar_usuarios.png" alt="Cadastrar Usuários" />
-                <p>Vilarouca Advocacia | Cadastrar Usuários</p>
-            </div>
+    <section id="experiences">
+      <div class="wrap">
+        <h2>Experiences</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Systems Analyst / IT Assistant</h3>
+            <div class="meta">Vilarouca / Doutor Soluções · July 2024 to July 2025</div>
+            <ul class="list">
+              <li class="li"><span class="dot"></span><span>Built RPA with Selenium for real workflows.</span></li>
+              <li class="li"><span class="dot"></span><span>Delivered REST APIs with Django REST Framework.</span></li>
+              <li class="li"><span class="dot"></span><span>Shipped chatbots and landing pages with clear metrics.</span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>IT Assistant</h3>
+            <div class="meta">Atacadão S.A / Carrefour · March 2022 to March 2024</div>
+            <ul class="list">
+              <li class="li"><span class="dot"></span><span>Owned Linux and Windows infrastructure operations.</span></li>
+              <li class="li"><span class="dot"></span><span>Automated routines with Bash for reliability.</span></li>
+              <li class="li"><span class="dot"></span><span>Supported NF e and data center workloads end to end.</span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Software Developer</h3>
+            <div class="meta">Alow · June 2025 to Present</div>
+            <ul class="list">
+              <li class="li"><span class="dot"></span><span>Cut pagination load time from minutes to milliseconds with MySQL offset, PHP, Ajax, jQuery, and DataTables.</span></li>
+              <li class="li"><span class="dot"></span><span>Built telecom billing RPA with Selenium, regex, and high volume processing.</span></li>
+              <li class="li"><span class="dot"></span><span>Reduced duplication by about 70 percent with Symfony static utilities and stronger tests.</span></li>
+            </ul>
+          </div>
         </div>
-        <p style="margin-top: 2rem;">Developed By: Lucas Sobrinho</p>
+      </div>
     </section>
 
-    <section class="section-projects">
-        <h3>UI/UX Design - Projects</h3>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="img/vilarouca_trabalhe_conosco.PNG" alt="Auxílio Acidente" />
-                <p>Vilarouca Advocacia | Auxílio Acidente</p>
-                <a href="https://www.vilarouca.com/vilarouca-trabalhe-conosco" target="_blank" rel="noopener noreferrer"
-                    class="btn-visit">Visitar Página</a>
+    <section id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>NuvemFin <span class="meta" style="display:inline;">Personal Project</span></h3>
+            <div class="tiny">Laravel · JavaScript · Postgres</div>
+            <div class="tags">
+              <span class="tag">Finance control</span>
+              <span class="tag">Multi tenant</span>
+              <span class="tag">Production mindset</span>
             </div>
+            <div class="fine" style="margin-top:10px;">Built to validate patterns, performance, and clean deployment.</div>
+          </div>
 
-            <div class="project-card">
-                <img src="img/vilarouca_trabalhista.png" alt="Trabalhista" />
-                <p>Vilarouca Advocacia | Trabalhista</p>
-                <a href="https://www.vilarouca.com/trabalhista/advogados-trabalhista-bahia" target="_blank"
-                    rel="noopener noreferrer" class="btn-visit">Visitar Página</a>
+          <div class="card">
+            <h3>Offset Pagination Engine <span class="meta" style="display:inline;">Case Study</span></h3>
+            <div class="tiny">PHP · MySQL · Ajax · DataTables</div>
+            <div class="tags">
+              <span class="tag">Milliseconds UX</span>
+              <span class="tag">Server driven UI</span>
+              <span class="tag">Real time filtering</span>
             </div>
+            <div class="fine" style="margin-top:10px;">Designed for speed at scale with predictable query patterns.</div>
+          </div>
 
-            <div class="project-card">
-                <img src="img/vilarouca_previdenciario.PNG" alt="Previdenciário" />
-                <p>Vilarouca Advocacia | Previdenciário</p>
-                <a href="https://www.vilarouca.com/previdenciario" target="_blank" rel="noopener noreferrer"
-                    class="btn-visit">Visitar Página</a>
+          <div class="card">
+            <h3>Telecom Billing RPA <span class="meta" style="display:inline;">Case Study</span></h3>
+            <div class="tiny">Python · Selenium · Regex</div>
+            <div class="tags">
+              <span class="tag">High volume</span>
+              <span class="tag">Stable automation</span>
+              <span class="tag">Operational impact</span>
             </div>
-        </div>
-    </section>
-
-
-    <section class="professional-experience">
-        <h2>Professional Experience</h2>
-        <div class="flex-experience">
-
-            <div class="experience-card">
-                <h3>Systems Analyst / IT Assistant</h3>
-                <span class="company">Vilarouca / Doutor Soluções • July 2024 – Present</span>
-                <p>
-                    Implemented automation systems using Python and frameworks like Selenium, OpenPyXL, Pandas, and
-                    NumPy.
-                    Developed RESTful APIs with Django Rest Framework, created innovative chatbots, built landing pages
-                    for paid traffic,
-                    and developed web/mobile applications using Python and JavaScript.
-                </p>
-            </div>
-
-            <div class="experience-card">
-                <h3>IT Assistant</h3>
-                <span class="company">Atacadão S.A / Carrefour • March 2022 – March 2024</span>
-                <p>
-                    Managed corporate server infrastructure on Linux and Windows systems. Automated tasks using Bash
-                    scripting,
-                    maintained NF-e servers, administered the company’s data center, and implemented self-service and
-                    real-time price display systems.
-                </p>
-            </div>
+            <div class="fine" style="margin-top:10px;">Automates billing collection and reduces manual operations.</div>
+          </div>
         </div>
 
+        <div class="sub">Strong fundamentals. Strong delivery. Strong results.</div>
+      </div>
     </section>
 
+    <section id="awards">
+      <div class="wrap">
+        <h2>Awards</h2>
 
+        <div class="grid">
+          <div class="card">
+            <h3>First Place · Tech Experience 2025 · Univest</h3>
+            <div class="tiny">Inventory control with forecasting and analytics.</div>
+            <div class="tags">
+              <span class="tag">Flask</span>
+              <span class="tag">Scikit Learn</span>
+              <span class="tag">Prophet</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Chart.js</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Second Place · Tech Experience 2024 · Univest</h3>
+            <div class="tiny">One week delivery. High ownership. Clean execution.</div>
+            <div class="tags">
+              <span class="tag">Prisma ORM</span>
+              <span class="tag">API fixes</span>
+              <span class="tag">PO and PM roles</span>
+              <span class="tag">UI prototyping</span>
+            </div>
+          </div>
+
+          <div class="card" id="contact">
+            <h3>Contact</h3>
+            <div class="tiny">Use the buttons on the first section.</div>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">APIs</span>
+              <span class="tag">RPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
