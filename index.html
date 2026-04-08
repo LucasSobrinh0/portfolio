@@ -6,263 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas | Software Developer</title>
 
+    <script src="./script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        darkBase: '#0f172a', // Slate 900
-                        glowColor: '#22d3ee', // Cyan 400
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'glow': '0 0 15px rgba(34, 211, 238, 0.5)',
-                        'glow-hover': '0 0 25px rgba(34, 211, 238, 0.7)',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #0f172a;
-            /* Fallback */
-            color: white;
-            overflow-x: hidden;
-        }
-
-        /* Section Styling */
-        /*teste*/
-        html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y proximity;
-            overflow-y: scroll;
-        }
-
-        section {
-            min-height: 100dvh;
-            height: auto;
-
-            width: 100%;
-            scroll-snap-align: start;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            padding: 4rem 2rem;
-            box-sizing: border-box;
-            position: relative;
-        }
-
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #22d3ee;
-        }
-
-        /* Text Glow Class */
-        .text-glow {
-            color: #22d3ee;
-            text-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
-        }
-
-        /* Animation for Scroll Down Arrow */
-        @keyframes bounce {
-
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translateY(0);
-            }
-
-            40% {
-                transform: translateY(-10px);
-            }
-
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        .animate-bounce-custom {
-            animation: bounce 2s infinite;
-        }
-
-        /* Card Hover Effects */
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
-            border-color: rgba(34, 211, 238, 0.3);
-        }
-
-        /* Custom Bullet Points */
-        ul.custom-bullets li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        ul.custom-bullets li::before {
-            content: '•';
-            color: #22d3ee;
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -0.2rem;
-            text-shadow: 0 0 5px rgba(34, 211, 238, 0.6);
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body class="bg-darkBase antialiased selection:bg-glowColor selection:text-darkBase">
 
     <section id="home">
         <div class="text-center max-w-4xl z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
-                Hi, I'm Lucas. <br class="hidden md:block" />
-                Software Developer <br class="md:hidden" />
-                <span class="text-glow">PHP, Python & Javascript.</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight mobile-title">
+                <span data-i18n="hero-title-line1">Hi, I'm Lucas.</span> <br class="hidden md:block" />
+                <span data-i18n="hero-title-line2">Software Developer</span> <br class="md:hidden" />
+                <span class="text-glow" data-i18n="hero-title-line3">PHP, Python & Javascript.</span>
             </h1>
 
-            <p class="text-slate-400 text-lg md:text-xl mb-8 font-light">
-                Backend, automation, and frontend with measurable performance.
+            <p class="text-slate-400 text-lg md:text-xl mb-8 font-light mobile-subtitle">
+                <span data-i18n="hero-subtitle">I build web systems, automations, and digital products with a strong focus on performance, practical
+                usability, and real business impact.</span>
             </p>
 
-            <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <a href="https://www.linkedin.com/in/lucas-sobrinho-c/" target="_blank" rel="noopener noreferrer"
-                    class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
-                    <i class="fab fa-linkedin-in text-xl"></i>
-                </a>
-                <a href="https://github.com/LucasSobrinh0" target="_blank" rel="noopener noreferrer"
-                    class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
-                    <i class="fab fa-github text-xl"></i>
-                </a>
+            <div class="flex flex-wrap justify-center gap-6 mb-12 mobile-actions">
+                <div class="flex flex-wrap justify-center gap-6 mobile-socials">
+                    <a href="https://www.linkedin.com/in/lucas-sobrinho-c/" target="_blank" rel="noopener noreferrer"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/LucasSobrinh0" target="_blank" rel="noopener noreferrer"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
                 <!-- <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-glowColor text-glowColor hover:bg-glowColor hover:text-darkBase hover:shadow-glow transition-all duration-300">
                         <i class="fas fa-envelope text-xl"></i>
                     </a> -->
 
+                <div class="lang-toggle mobile-lang" aria-label="Language switcher">
+                    <button type="button" class="active" data-lang-button="en">EN</button>
+                    <button type="button" data-lang-button="pt">PT</button>
+                </div>
+
                 <a href="mailto:lucas.sobrinho.crn@gmail.com"
-                    class="px-8 h-12 flex items-center justify-center rounded-full border border-slate-600 text-slate-300 hover:border-glowColor hover:text-glowColor transition-all duration-300 font-medium">
-                    Contact
+                    class="px-8 h-12 flex items-center justify-center rounded-full border border-slate-600 text-slate-300 hover:border-glowColor hover:text-glowColor transition-all duration-300 font-medium mobile-button">
+                    <span data-i18n="contact-button">Contact</span>
                 </a>
             </div>
         </div>
 
         <a href="#experiences"
-            class="absolute bottom-10 cursor-pointer animate-bounce-custom flex flex-col items-center gap-2 group">
-            <span class="text-xs text-slate-500 group-hover:text-glowColor transition-colors">Scroll</span>
+            class="absolute bottom-10 cursor-pointer animate-bounce-custom flex flex-col items-center gap-2 group mobile-scroll">
+            <span class="text-xs text-slate-500 group-hover:text-glowColor transition-colors" data-i18n="scroll">Scroll</span>
             <i class="fas fa-chevron-down text-glowColor text-xl"></i>
         </a>
     </section>
 
-    <!-- <section id="expertise">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Expertise</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
-                
-                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
-                    <h3 class="text-2xl font-bold mb-6 text-glow">PHP</h3>
-                    <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
-                        <li>Symfony</li>
-                        <li>Laravel</li>
-                        <li>APIs</li>
-                    </ul>
-                </div>
 
-                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
-                    <h3 class="text-2xl font-bold mb-6 text-glow">Python</h3>
-                    <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
-                        <li>Django</li>
-                        <li>Selenium</li>
-                        <li>TensorFlow</li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-xl card-hover text-center">
-                    <h3 class="text-2xl font-bold mb-6 text-glow">Javascript</h3>
-                    <ul class="text-left inline-block text-lg text-slate-300 space-y-3 custom-bullets">
-                        <li>Jquery</li>
-                        <li>React</li>
-                        <li>Alpine</li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
 
     <section id="experiences">
-        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white">Experiences</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-white" data-i18n="experiences-title">Experiences</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl px-4 mobile-stack">
 
             <div
-                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
-                <h3 class="text-xl font-bold text-white mb-1">Software Developer</h3>
-                <div class="text-sm text-glow mb-4">Alow • Jun 2025 – Present</div>
+                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col mobile-card">
+                <h3 class="text-xl font-bold text-white mb-1" data-i18n="exp1-role">Software Developer</h3>
+                <div class="text-sm text-glow mb-4" data-i18n="exp1-date">Alow • Jun 2025 – Present</div>
                 <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
-                    <li>Reduced load times from minutes to milliseconds using Ajax, DataTables, and offset pagination.
+                    <li data-i18n="exp1-li1">Built and maintained web systems on Apache, Linux, Docker, and PostgreSQL with near-100% availability.</li>
+                    <li data-i18n="exp1-li2">Created MVPs and integrations with Active Directory, Apollo, HubSpot, Gmail, and
+                        BotConversa.</li>
+                    <li data-i18n="exp1-li3">Implemented LLM workflows that increased telecom invoice analysis throughput by 10x.</li>
+                    <li data-i18n="exp1-li4">Developed WhatsApp integrations and Node.js APIs to streamline business operations.</li>
+                    <li data-i18n="exp1-li5">Reduced load times from minutes to milliseconds using Ajax, DataTables, and offset pagination.
                     </li>
-                    <li>Built Telecom RPA with Python and Selenium to process high volume invoice data.</li>
-                    <li>Optimized Symfony codebase, cutting dependencies by seventy percent.</li>
-                    <li>Improved UI using dynamic server side rendering with real time filtering.</li>
-                    <li>Implemented automated testing, sharply reducing sprint bug volume.</li>
-                    <li>Redesigned critical UX flows using modal based navigation.</li>
+                    <li data-i18n="exp1-li6">Built telecom RPAs with Python and Selenium to process high-volume invoice data at scale.</li>
+                    <li data-i18n="exp1-li7">Optimized a Symfony codebase, reducing dependencies and improving maintainability.
+                    </li>
+                    <li data-i18n="exp1-li8">Introduced automated tests, reducing recurring bugs across sprints.</li>
+                    <li data-i18n="exp1-li9">Improved key UX flows with faster, modal-based interactions.</li>
                 </ul>
             </div>
 
             <div
-                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
-                <h3 class="text-xl font-bold text-white mb-1">Systems Analyst</h3>
-                <div class="text-sm text-glow mb-4">Vilarouca / Doutor Soluções • July 2024 – July 2025</div>
+                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col mobile-card">
+                <h3 class="text-xl font-bold text-white mb-1" data-i18n="exp2-role">Systems Analyst</h3>
+                <div class="text-sm text-glow mb-4" data-i18n="exp2-date">Vilarouca / Doutor Soluções • July 2024 – July 2025</div>
                 <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
-                    <li>Implemented automation systems using Python with Selenium, Pandas, and NumPy.</li>
-                    <li>Developed REST APIs using Django Rest Framework.</li>
-                    <li>Created chatbots focused on operational efficiency.</li>
-                    <!-- <li>Built high performance web and mobile applications.</li> -->
+                    <li data-i18n="exp2-li1">Designed Python automations with Selenium, Pandas, and NumPy, increasing operational efficiency by 80%.</li>
+                    <li data-i18n="exp2-li2">Developed REST APIs with Django REST Framework to improve integration between internal systems.</li>
+                    <li data-i18n="exp2-li3">Created chatbots that accelerated service workflows by 3x.</li>
+                    <li data-i18n="exp2-li4">Managed Active Directory and Linux servers, sustaining infrastructure reliability for internal operations.</li>
+                    <li data-i18n="exp2-li5">Supported planning and negotiation of new systems, aligning technical decisions with business priorities.</li>
+                    
                 </ul>
             </div>
 
             <div
-                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col">
-                <h3 class="text-xl font-bold text-white mb-1">IT Assistant</h3>
-                <div class="text-sm text-glow mb-4">Atacadão S.A / Carrefour • March 2022 – March 2024</div>
+                class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-lg hover:bg-slate-800 transition-colors flex flex-col mobile-card">
+                <h3 class="text-xl font-bold text-white mb-1" data-i18n="exp3-role">IT Assistant</h3>
+                <div class="text-sm text-glow mb-4" data-i18n="exp3-date">Atacadão S.A / Carrefour • March 2022 – March 2024</div>
                 <ul class="text-sm text-slate-400 space-y-2 list-disc pl-4 flex-grow">
-                    <li>Managed Linux and Windows infrastructure environments.</li>
-                    <li>Automated administrative routines using Bash scripts.</li>
-                    <li>Maintained NF e server operations.</li>
-                    <li>Implemented real time price display systems for retail.</li>
+                    <li data-i18n="exp3-li1">Managed Linux and Windows infrastructure environments.</li>
+                    <li data-i18n="exp3-li2">Automated administrative routines using Bash scripts.</li>
+                    <li data-i18n="exp3-li3">Maintained NF e server operations.</li>
+                    <li data-i18n="exp3-li4">Implemented real time price display systems for retail.</li>
                 </ul>
             </div>
 
@@ -271,43 +122,78 @@
 
 
     <section id="projects">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Projects</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white" data-i18n="projects-title">Projects</h2>
 
-        <a href="https://nuvemfin.onrender.com/" target="_blank" rel="noopener noreferrer">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+        <div class="flex flex-row flex-wrap justify-center gap-8 w-full max-w-6xl px-4 projects-row">
+            <a href="https://movos.sobrinholabs.tech" target="_blank" rel="noopener noreferrer"
+                class="flex-1 min-w-[280px] max-w-[520px]">
+                <div class="grid grid-cols-1 gap-8 w-full mobile-project">
 
-                <div
-                    class="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-glowColor transition-all duration-300 group md:col-start-2">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-bold text-white group-hover:text-glowColor transition-colors">NuvemFin
-                        </h3>
-                        <span class="text-xs border border-slate-500 px-2 py-1 rounded text-slate-400">Personal</span>
+                    <div
+                        class="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-glowColor transition-all duration-300 group mobile-card mobile-project-card h-full">
+                        <div class="flex justify-between items-start mb-4 mobile-project-header">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-glowColor transition-colors">Movos
+                            </h3>
+                            <span class="text-xs border border-slate-500 px-2 py-1 rounded text-slate-400" data-i18n="personal-tag">Personal</span>
+                        </div>
+
+                        <p class="text-glow text-sm font-mono mb-4">Python • Javascript • Postgres</p>
+
+                        <p class="text-slate-300 mb-2 font-medium" data-i18n="technologies">Technologies</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            React 19, Django, PostgreSQL, Docker, Redis, Nginx, Gunicorn, Gemini API.
+                        </p>
+
+                        <p class="text-slate-300 mb-2 font-medium" data-i18n="overview">Overview</p>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="project1-overview">
+                            An AI-assisted platform for generating diet and workout plans, with a simple flow for tracking
+                            training progress over time.
+                        </p>
                     </div>
-
-                    <p class="text-glow text-sm font-mono mb-4">Laravel • Javascript • Postgres</p>
-
-                    <p class="text-slate-300 mb-2 font-medium">Objective:</p>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Robust financial control system designed to test and implement cutting-edge monolithic
-                        architectures.
-                    </p>
                 </div>
+            </a>
 
-            </div>
-        </a>
+            <a href="https://app.sobrinholabs.tech" target="_blank" rel="noopener noreferrer"
+                class="flex-1 min-w-[280px] max-w-[520px]">
+                <div class="grid grid-cols-1 gap-8 w-full mobile-project">
+
+                    <div
+                        class="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-glowColor transition-all duration-300 group mobile-card mobile-project-card h-full">
+                        <div class="flex justify-between items-start mb-4 mobile-project-header">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-glowColor transition-colors">SobrinhoLabs
+                            </h3>
+                            <span class="text-xs border border-slate-500 px-2 py-1 rounded text-slate-400" data-i18n="personal-tag">Personal</span>
+                        </div>
+
+                        <p class="text-glow text-sm font-mono mb-4">Laravel • Javascript • Postgres , Nginx</p>
+
+                        <p class="text-slate-300 mb-2 font-medium" data-i18n="technologies">Technologies</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Laravel, jQuery, PostgreSQL, Docker, Nginx.
+                        </p>
+
+                        <p class="text-slate-300 mb-2 font-medium" data-i18n="overview">Overview</p>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="project2-overview">
+                            A platform for managing activities and mentorship materials with a focus on organization,
+                            follow-up, and practical day-to-day use.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
 
     <section id="awards">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Awards & Recognition</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white" data-i18n="awards-title">Awards & Recognition</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl px-4 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl px-4 mb-16 mobile-awards">
 
-            <div class="relative pl-8 border-l-2 border-slate-700">
+            <div class="relative pl-8 border-l-2 border-slate-700 mobile-award-item">
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-glowColor shadow-glow"></div>
                 <h3 class="text-xl font-bold text-white mb-1">1° Place - Tech Experience 2025</h3>
                 <span class="text-sm text-slate-500 block mb-4">Faculdade Univest</span>
 
-                <p class="text-slate-300 mb-3 text-sm">
+                <p class="text-slate-300 mb-3 text-sm" data-i18n="award1-description">
                     Developed an AI-driven market inventory control system predicting stock shortages.
                 </p>
                 <div class="text-xs font-mono text-glow">
@@ -315,18 +201,18 @@
                 </div>
             </div>
 
-            <div class="relative pl-8 border-l-2 border-slate-700">
+            <div class="relative pl-8 border-l-2 border-slate-700 mobile-award-item">
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-500"></div>
                 <h3 class="text-xl font-bold text-white mb-1">2° Place - Tech Experience 2024</h3>
                 <span class="text-sm text-slate-500 block mb-4">Faculdade Univest</span>
 
-                <p class="text-slate-300 mb-3 text-sm">
+                <p class="text-slate-300 mb-3 text-sm" data-i18n="award2-description">
                     Agile Challenge. Acted as PO/PM delivering real software solutions.
                 </p>
                 <ul class="text-xs text-slate-400 list-disc pl-4 space-y-1">
-                    <li>Designed UI/UX prototypes.</li>
-                    <li>Implemented Prisma ORM & API integrations.</li>
-                    <li>Fixed critical backend performance bugs.</li>
+                    <li data-i18n="award2-li1">Designed UI/UX prototypes.</li>
+                    <li data-i18n="award2-li2">Implemented Prisma ORM & API integrations.</li>
+                    <li data-i18n="award2-li3">Fixed critical backend performance bugs.</li>
                 </ul>
             </div>
 
@@ -334,7 +220,7 @@
 
         <button onclick="document.getElementById('home').scrollIntoView()"
             class="mt-8 px-6 py-2 rounded-full border border-slate-600 text-slate-400 hover:text-white hover:border-white transition-all text-sm">
-            Back to Top <i class="fas fa-arrow-up ml-2"></i>
+            <span data-i18n="back-to-top">Back to Top</span> <i class="fas fa-arrow-up ml-2"></i>
         </button>
     </section>
 
