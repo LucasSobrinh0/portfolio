@@ -72,6 +72,8 @@ const translations = {
             "An AI-assisted platform for generating diet and workout plans, with a simple flow for tracking training progress over time.",
         "project2-overview":
             "A platform for managing activities and mentorship materials with a focus on organization, follow-up, and practical day-to-day use.",
+        "project3-overview":
+            "A collaborative document platform with real-time editing powered by Node.js and WebSockets.",
         "awards-title": "Awards & Recognition",
         "award1-description":
             "Developed an AI-driven market inventory control system predicting stock shortages.",
@@ -137,6 +139,8 @@ const translations = {
             "Uma plataforma com apoio de IA para gerar dietas e treinos, com um fluxo simples para acompanhar a evolução dos treinos ao longo do tempo.",
         "project2-overview":
             "Uma plataforma para gerenciar atividades e materiais de mentoria, com foco em organização, acompanhamento e uso prático no dia a dia.",
+        "project3-overview":
+            "Uma plataforma colaborativa de documentos com edição em tempo real usando Node.js e WebSockets.",
         "awards-title": "Prêmios e Reconhecimentos",
         "award1-description":
             "Desenvolvi um sistema de controle de estoque com IA voltado para prever rupturas e apoiar a tomada de decisão.",
